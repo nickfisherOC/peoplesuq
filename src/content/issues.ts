@@ -14,7 +14,7 @@ export const issues: Issue[] = [
       "Honest conversations about substance use, the road back, and what recovery actually looks like.",
     intro:
       "Addiction touches families in every neighbourhood, yet it's still talked about in whispers. We bring these conversations into the open — the relapse and the comeback, the science and the lived experience, and the people who make recovery possible.",
-    image: { src: "", alt: "Addiction & Recovery" },
+    image: { src: "/images/addiction-1.jpg", alt: "Addiction & Recovery" },
   },
   {
     slug: "mental-health",
@@ -24,7 +24,7 @@ export const issues: Issue[] = [
       "Real talk about anxiety, depression, trauma, and asking for help before it's a crisis.",
     intro:
       "Mental health is health. We talk about what people actually live with, how they cope, where support works and where the system falls short — without clichés and without shame.",
-    image: { src: "", alt: "Mental Health" },
+    image: { src: "/images/mental-health-1.jpg", alt: "Mental Health" },
   },
   {
     slug: "poverty-homelessness",
@@ -34,7 +34,7 @@ export const issues: Issue[] = [
       "The reality of housing insecurity and life on the edge — beyond the headlines and stereotypes.",
     intro:
       "Homelessness is rarely one story and never just one choice. We listen to people living it and the organizations working alongside them, and we push past the stereotypes to what's actually happening.",
-    image: { src: "", alt: "Poverty & Homelessness" },
+    image: { src: "/images/homeless-1.avif", alt: "Poverty & Homelessness" },
   },
   {
     slug: "treatment-support",

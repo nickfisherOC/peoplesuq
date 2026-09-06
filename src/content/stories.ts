@@ -20,7 +20,7 @@ export const stories: Story[] = [
       "This is placeholder copy. Real stories will be told in the words of the people who lived them, published only with consent.",
       "Photography carries much of the weight here — a portrait, a place, a detail. The writing stays honest and specific.",
     ],
-    image: { src: "", alt: "Placeholder recovery story" },
+    image: { src: "/images/person-story-3.png", alt: "Portrait accompanying a recovery story" },
     issues: ["addiction-recovery"],
     format: "read",
     isPlaceholder: true,
@@ -32,7 +32,7 @@ export const stories: Story[] = [
     date: "2025-12-22",
     teaser:
       "A placeholder profile of a community initiative feeding neighbours with dignity.",
-    image: { src: "", alt: "Placeholder community profile" },
+    image: { src: "/images/homeless-3.webp", alt: "Community outreach — the people behind the kitchen" },
     issues: ["food-insecurity", "community-second-chances"],
     format: "read",
     isPlaceholder: true,
@@ -68,7 +68,7 @@ export const stories: Story[] = [
     date: "2025-11-14",
     teaser:
       "A placeholder story following the path from the street to stable housing.",
-    image: { src: "", alt: "Placeholder housing story" },
+    image: { src: "/images/homeless-2.jpg", alt: "A path from the street to stable housing" },
     issues: ["poverty-homelessness", "treatment-support"],
     format: "read",
     isPlaceholder: true,

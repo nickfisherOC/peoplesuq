@@ -81,7 +81,8 @@ export default function AboutPage() {
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <MediaFrame
             seed="about-podcast"
-            alt="The People Suq podcast"
+            src="/images/podcast-1.jpg"
+            alt="The People Suq podcast in the studio"
             label="The show"
             aspect="wide"
             className="lg:order-2"

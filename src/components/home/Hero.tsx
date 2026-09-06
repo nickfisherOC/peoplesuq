@@ -43,6 +43,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <MediaFrame
               seed="hero-portrait-a"
+              src="/images/person-story-1.png"
               alt="People Suq — real people, real conversations"
               label="Voices"
               aspect="portrait"
@@ -52,13 +53,16 @@ export default function Hero() {
             />
             <MediaFrame
               seed="hero-portrait-b"
+              src="/images/person-story-2.jpg"
               alt="People Suq — community and stories"
               label="Stories"
               aspect="portrait"
+              priority
               sizes="(max-width: 1024px) 45vw, 25vw"
             />
             <MediaFrame
               seed="hero-wide-c"
+              src="/images/podcast-2.jpeg"
               alt="People Suq — conversations that matter"
               label="Conversation"
               aspect="video"
