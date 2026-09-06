@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+/*
+  People Suq design system
+  --------------------------------
+  Brand continuity with SUQ MEDIA: purple (primary) + orange (accent).
+  People Suq uses them in a bolder, more editorial, story-driven way —
+  strong purple, orange reserved for emphasis / CTAs, dark grounds and
+  generous white space.
+*/
+
+@theme {
+  /* --- Brand: Purple (primary) --- */
+  --color-purple-50: #f4efff;
+  --color-purple-100: #e7dbff;
+  --color-purple-200: #cfb6ff;
+  --color-purple-300: #b088ff;
+  --color-purple-400: #9257f7;
+  --color-purple-500: #7b2ff0; /* core brand purple */
+  --color-purple-600: #6a1fd8;
+  --color-purple-700: #5717b0;
+  --color-purple-800: #43138a;
+  --color-purple-900: #2f0e63;
+  --color-purple-950: #1c083c;
+
+  /* --- Brand: Orange (accent / emphasis / CTA) --- */
+  --color-orange-50: #fff5ec;
+  --color-orange-100: #ffe6d0;
+  --color-orange-200: #ffc79c;
+  --color-orange-300: #ffa565;
+  --color-orange-400: #fb8a3c;
+  --color-orange-500: #f97316; /* core brand orange */
+  --color-orange-600: #e35d05;
+  --color-orange-700: #bc4708;
+
+  /* --- Neutrals: ink / charcoal / paper --- */
+  --color-ink: #0a0a0f;
+  --color-charcoal: #131318;
+  --color-graphite: #1e1e26;
+  --color-slate-line: #2b2b36;
+  --color-paper: #ffffff;
+  --color-bone: #f6f5f2;
+  --color-fog: #e9e8e4;
+
+  /* --- Typography --- */
+  --font-display: var(--font-archivo), "Arial Narrow", system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* --- Layout --- */
+  --spacing-gutter: 1.5rem;
+}
+
+/* Base element defaults */
+:root {
+  color-scheme: dark;
+  --page-bg: var(--color-ink);
+  --page-fg: var(--color-bone);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--page-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-orange-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Utility component layer */
+@layer components {
+  /* Editorial display headline: tight, heavy, uppercase-friendly */
+  .headline {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+  }
+
+  /* Section content width */
+  .container-page {
+    width: 100%;
+    max-width: 80rem; /* 1280px */
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Subtle brand link underline */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 2px;
+  }
+}
+
+/* Screen-reader-only helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
