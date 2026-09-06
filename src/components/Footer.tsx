@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           {/* Brand + mission */}
           <div className="md:col-span-5">
-            <Logo className="text-3xl" />
+            <Logo className="h-12 w-auto" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
               {site.mission}
             </p>

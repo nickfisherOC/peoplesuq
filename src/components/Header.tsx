@@ -40,7 +40,7 @@ export default function Header() {
           a containing block that would trap the fixed mobile menu below. */}
       <div className="border-b border-white/10 bg-ink/85 backdrop-blur-md">
         <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
-        <Logo className="text-2xl md:text-3xl" />
+        <Logo className="h-9 w-auto md:h-11" priority />
 
         {/* Desktop nav */}
         <nav

@@ -1,57 +1,44 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
-  /** Layout: inline (default) or stacked (PEOPLE over SUQ). */
-  stacked?: boolean;
-  /** Colour context. */
-  tone?: "dark" | "light";
   className?: string;
   /** Render as a link to home (default true). */
   asLink?: boolean;
+  /** Prioritize loading (use in the header). */
+  priority?: boolean;
 }
 
 /**
- * People Suq typographic wordmark — bold display type echoing the podcast
- * logo (purple "PEOPLE", orange "SUQ"). Purely typographic so it stays crisp
- * at any size and is fully accessible.
+ * People Suq brand wordmark (brushed purple "PEOPLE" / orange "SUQ").
+ * Transparent PNG, sized by height via `className` (width auto keeps ratio).
  */
 export default function Logo({
-  stacked = false,
-  tone = "dark",
-  className = "",
+  className = "h-10 w-auto md:h-12",
   asLink = true,
+  priority = false,
 }: LogoProps) {
-  const purple = tone === "dark" ? "text-purple-400" : "text-purple-700";
-  const orange = "text-orange-500";
-
   const mark = (
-    <span
-      className={`headline inline-flex items-baseline uppercase ${
-        stacked ? "flex-col !leading-[0.82]" : "gap-[0.22em]"
-      } ${className}`}
-      aria-hidden
-    >
-      <span className={purple}>People</span>
-      <span className={orange}>Suq</span>
-    </span>
+    <Image
+      src="/images/peoplesuq-logo.png"
+      alt="People Suq"
+      width={996}
+      height={645}
+      priority={priority}
+      sizes="180px"
+      className={className}
+    />
   );
 
-  if (!asLink) {
-    return (
-      <span className="inline-flex items-center">
-        {mark}
-        <span className="sr-only">People Suq — home</span>
-      </span>
-    );
-  }
+  if (!asLink) return mark;
 
   return (
     <Link
       href="/"
+      aria-label="People Suq — home"
       className="inline-flex items-center transition-opacity hover:opacity-90"
     >
       {mark}
-      <span className="sr-only">People Suq — home</span>
     </Link>
   );
 }

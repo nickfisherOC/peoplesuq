@@ -32,7 +32,7 @@ export const stories: Story[] = [
     date: "2025-12-22",
     teaser:
       "A placeholder profile of a community initiative feeding neighbours with dignity.",
-    image: { src: "/images/homeless-3.webp", alt: "Community outreach — the people behind the kitchen" },
+    image: { src: "/images/kitchen-1.jpg", alt: "Volunteers behind a community kitchen" },
     issues: ["food-insecurity", "community-second-chances"],
     format: "read",
     isPlaceholder: true,
@@ -44,7 +44,7 @@ export const stories: Story[] = [
     date: "2025-12-10",
     teaser:
       "A placeholder story about reentry and building something new after a hard chapter.",
-    image: { src: "", alt: "Placeholder second-chance story" },
+    image: { src: "/images/person-story-4.jpg", alt: "Portrait accompanying a second-chance story" },
     issues: ["community-second-chances"],
     format: "watch",
     isPlaceholder: true,
@@ -56,7 +56,7 @@ export const stories: Story[] = [
     date: "2025-11-28",
     teaser:
       "A placeholder interview on living with anxiety and finding support that actually works.",
-    image: { src: "", alt: "Placeholder mental-health interview" },
+    image: { src: "/images/person-story-5.jpg", alt: "Portrait accompanying a mental-health interview" },
     issues: ["mental-health", "treatment-support"],
     format: "read",
     isPlaceholder: true,
@@ -80,7 +80,7 @@ export const stories: Story[] = [
     date: "2025-10-30",
     teaser:
       "A placeholder spotlight on an organization making a real difference in the community.",
-    image: { src: "", alt: "Placeholder organization spotlight" },
+    image: { src: "/images/community-2.jpg", alt: "An organization doing the quiet work in the community" },
     issues: ["treatment-support", "community-second-chances"],
     format: "watch",
     isPlaceholder: true,

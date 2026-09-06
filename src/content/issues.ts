@@ -44,7 +44,7 @@ export const issues: Issue[] = [
       "Navigating treatment, medication, and the support systems people rely on to keep going.",
     intro:
       "Getting help is complicated — programs, waitlists, medication, insurance, and the people who guide you through it. We map how support really works and share what helps.",
-    image: { src: "", alt: "Treatment & Support" },
+    image: { src: "/images/treatment-1.jpeg", alt: "Treatment & Support" },
   },
   {
     slug: "food-insecurity",
@@ -54,7 +54,7 @@ export const issues: Issue[] = [
       "Who goes without, why it happens, and the community efforts feeding neighbours with dignity.",
     intro:
       "Food insecurity hides in plain sight. We highlight the scale of the problem and the community kitchens, pantries and people making sure no one goes without.",
-    image: { src: "", alt: "Food Insecurity" },
+    image: { src: "/images/food-insecurity-1.jpg", alt: "Food Insecurity" },
   },
   {
     slug: "community-second-chances",
@@ -64,7 +64,7 @@ export const issues: Issue[] = [
       "Reentry, redemption, and the people proving that where you've been isn't where you end.",
     intro:
       "Everyone deserves a path forward. We tell stories of second chances — reentry, redemption, and the community support that helps people build something new.",
-    image: { src: "", alt: "Community & Second Chances" },
+    image: { src: "/images/community-1.jpg", alt: "Community & Second Chances" },
   },
 ];
 

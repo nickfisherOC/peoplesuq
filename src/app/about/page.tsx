@@ -68,6 +68,7 @@ export default function AboutPage() {
           </div>
           <MediaFrame
             seed="about-why"
+            src="/images/community-3.jpg"
             alt="People Suq — real conversations in the open"
             label="Our why"
             aspect="wide"
