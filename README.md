@@ -107,6 +107,29 @@ site, sitemap, and related-content links update automatically.
 - **Partner links:** update `connectedBrands` (SUQ MEDIA + Foundation) and
   `social` in `lib/site.ts`.
 
+## Deploying to Vercel
+
+The app runs as a full Next.js app (SSR, the `/api/cart` route, image
+optimization), so it's hosted on **Vercel**, with Network Solutions kept only as
+the domain registrar / DNS.
+
+1. On [vercel.com](https://vercel.com), **Add New → Project** and import the
+   GitHub repo (`nickfisherOC/peoplesuq`). Vercel auto-detects Next.js — no build
+   settings to change.
+2. Add **Environment Variables** (Project → Settings → Environment Variables).
+   These are NOT in the repo (`.env.local` is git-ignored), so they must be added
+   here — copy the values from your local `.env.local`:
+   - `SHOPIFY_STORE_DOMAIN`
+   - `SHOPIFY_STOREFRONT_TOKEN`
+   - `SHOPIFY_EXCLUDE_COLLECTIONS` (`frontpage`)
+   - `SHOPIFY_PRODUCT_HANDLES` (optional safety net)
+3. **Deploy** → you get a `*.vercel.app` URL to verify.
+4. Add the custom domain (Project → Settings → Domains → `peoplesuq.com` + `www`)
+   and set the DNS records Vercel shows you at Network Solutions. Vercel issues
+   SSL automatically once DNS resolves.
+
+Pushing to `main` triggers an automatic redeploy.
+
 ## Migrated from SUQ MEDIA
 
 Real content and assets have been migrated from suqmedia.com and the Foundation
