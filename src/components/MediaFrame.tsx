@@ -52,6 +52,9 @@ interface MediaFrameProps {
   priority?: boolean;
   sizes?: string;
   rounded?: boolean;
+  /** Focal point for object-cover crops. Use "top" for portraits so faces
+   *  aren't cut off in wide/landscape frames. */
+  focus?: "top" | "center";
 }
 
 /**
@@ -68,6 +71,7 @@ export default function MediaFrame({
   priority = false,
   sizes = "(max-width: 768px) 100vw, 50vw",
   rounded = true,
+  focus = "center",
 }: MediaFrameProps) {
   const base = `relative overflow-hidden bg-charcoal ${rounded ? "rounded-xl" : ""} ${aspectClass[aspect]} ${className}`;
 
@@ -80,7 +84,7 @@ export default function MediaFrame({
           fill
           sizes={sizes}
           priority={priority}
-          className="object-cover"
+          className={`object-cover ${focus === "top" ? "object-top" : "object-center"}`}
         />
       </div>
     );

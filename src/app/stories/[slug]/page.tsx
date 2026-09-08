@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Section from "@/components/Section";
-import MediaFrame from "@/components/MediaFrame";
+import VideoPlayer from "@/components/VideoPlayer";
 import Button from "@/components/Button";
 import StoryCard from "@/components/cards/StoryCard";
-import { Badge, Eyebrow, PlaceholderTag } from "@/components/ui";
+import { Badge, Eyebrow } from "@/components/ui";
 import { stories, getStory } from "@/content/stories";
 import { getIssue } from "@/content/issues";
 import { contact } from "@/lib/site";
@@ -43,20 +43,10 @@ export default async function StoryPage({
     .filter((s) => s.issues.some((i) => story.issues.includes(i)))
     .slice(0, 3);
 
-  const body =
-    story.body ??
-    [
-      story.teaser,
-      "Full story coming soon. This is placeholder body copy for the story detail layout.",
-    ];
-
   return (
     <>
-      <Section tone="charcoal" className="!pb-10">
-        <Link
-          href="/stories"
-          className="text-sm text-white/50 hover:text-white"
-        >
+      <Section tone="charcoal" className="!pb-8">
+        <Link href="/stories" className="text-sm text-white/50 hover:text-white">
           ← All stories
         </Link>
         <div className="mt-6 max-w-3xl">
@@ -74,51 +64,43 @@ export default async function StoryPage({
         </div>
       </Section>
 
-      <div className="container-page">
-        <div className="relative">
-          <MediaFrame
+      {/* Video-first: player leads, short summary beneath */}
+      <Section tone="ink" className="!pt-0">
+        <div className="mx-auto max-w-4xl">
+          <VideoPlayer
+            youtubeId={story.youtubeId}
+            posterSrc={story.image.src}
             seed={story.slug}
-            src={story.image.src}
-            alt={story.image.alt}
-            label={story.kind}
-            aspect="ultrawide"
+            title={story.title}
             priority
-            sizes="100vw"
           />
-          {story.isPlaceholder && (
-            <PlaceholderTag className="absolute left-4 top-4" />
-          )}
-          {story.image.credit && (
-            <p className="mt-2 text-xs text-white/40">{story.image.credit}</p>
-          )}
-        </div>
-      </div>
 
-      <Section tone="ink">
-        <article className="prose-invert mx-auto max-w-2xl">
-          {body.map((p, i) => (
-            <p
-              key={i}
-              className={`leading-relaxed text-white/80 ${i === 0 ? "text-xl" : "mt-5 text-lg"}`}
-            >
-              {p}
+          <div className="mx-auto mt-8 max-w-2xl">
+            <p className="text-xl leading-relaxed text-white/85">
+              {story.teaser}
             </p>
-          ))}
+            {story.body?.map((p, i) => (
+              <p key={i} className="mt-5 text-lg leading-relaxed text-white/70">
+                {p}
+              </p>
+            ))}
 
-          <div className="mt-10 rounded-2xl border border-white/10 bg-charcoal p-6">
-            <Eyebrow>Have a story like this?</Eyebrow>
-            <p className="mt-2 text-white/70">
-              People Suq is built on real voices. If you want to share yours,
-              we&apos;d love to hear from you.
-            </p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <Button href="/stories/share">Share your story</Button>
-              <Button href={`mailto:${contact.storyEmail}`} variant="secondary">
-                Email us
-              </Button>
+            <div className="mt-10 rounded-2xl border border-white/10 bg-charcoal p-6">
+              <Eyebrow>Have a story like this?</Eyebrow>
+              <p className="mt-2 text-white/70">
+                People Suq is built on real voices. Most of our stories are told
+                on camera — if you&apos;d be open to sharing yours, we&apos;d
+                love to hear from you.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Button href="/stories/share">Share your story</Button>
+                <Button href={`mailto:${contact.storyEmail}`} variant="secondary">
+                  Email us
+                </Button>
+              </div>
             </div>
           </div>
-        </article>
+        </div>
       </Section>
 
       {moreStories.length > 0 && (

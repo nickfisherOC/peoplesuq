@@ -80,8 +80,10 @@ export interface Story {
   image: ImageRef;
   /** Issue slugs this story relates to. */
   issues: string[];
-  /** "read" for articles, "watch" for video-led stories. */
+  /** "read" for articles, "watch" for video-led stories (the default here). */
   format: "read" | "watch";
+  /** YouTube video id for video stories. Empty until the video is published. */
+  youtubeId?: string;
   isPlaceholder?: boolean;
 }
 

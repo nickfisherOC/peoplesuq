@@ -71,7 +71,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${archivo.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-ink antialiased">
+      {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla) inject
+          attributes on <body> before React hydrates — this ignores that noise. */}
+      <body
+        className="min-h-screen bg-ink antialiased"
+        suppressHydrationWarning
+      >
         <CartProvider>
           <Header />
           <main id="main">{children}</main>

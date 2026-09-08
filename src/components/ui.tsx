@@ -50,6 +50,20 @@ export function PlaceholderTag({ className = "" }: { className?: string }) {
   );
 }
 
+/** Marks a video story/thumbnail with a small play pill. */
+export function VideoTag({ className = "" }: { className?: string }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full bg-black/55 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-widest text-white backdrop-blur ${className}`}
+    >
+      <svg width="8" height="9" viewBox="0 0 8 9" fill="currentColor" aria-hidden>
+        <path d="M0 0.5L8 4.5L0 8.5V0.5Z" />
+      </svg>
+      Video
+    </span>
+  );
+}
+
 /** Marks a real-but-unreleased item (e.g. an upcoming episode). */
 export function SoonTag({ className = "" }: { className?: string }) {
   return (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import MediaFrame from "../MediaFrame";
-import { Badge, PlaceholderTag } from "../ui";
+import { Badge, VideoTag } from "../ui";
 import type { Story } from "@/content/types";
 
 export default function StoryCard({
@@ -34,8 +34,8 @@ export default function StoryCard({
               : "(max-width: 768px) 100vw, 33vw"
           }
         />
-        {story.isPlaceholder && (
-          <PlaceholderTag className="absolute left-3 top-3" />
+        {story.format === "watch" && (
+          <VideoTag className="absolute left-3 top-3" />
         )}
       </Link>
 

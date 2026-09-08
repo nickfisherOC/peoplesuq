@@ -11,7 +11,6 @@ import { issues } from "@/content/issues";
 import { latestEpisode } from "@/content/episodes";
 import { storiesByNewest } from "@/content/stories";
 import { getMerch } from "@/lib/merch";
-import FoundationEmblem from "@/components/FoundationEmblem";
 import { connectedBrands } from "@/lib/site";
 
 export default async function HomePage() {
@@ -144,18 +143,16 @@ export default async function HomePage() {
 
           {/* Foundation */}
           <div className="rounded-2xl border border-white/15 bg-ink/40 p-8">
-            <div className="flex items-center gap-4">
-              <FoundationEmblem size={64} className="h-16 w-16 shrink-0" />
-              <div>
-                <p className="text-base font-bold text-white">
-                  {connectedBrands.foundation.name}
-                </p>
-                <p className="text-sm text-orange-400">
-                  {connectedBrands.foundation.tagline}
-                </p>
-              </div>
-            </div>
-            <p className="mt-6 text-sm leading-relaxed text-white/70">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/mkk-footer.png"
+              alt="Markin K Kossowski Foundation for Hope"
+              className="h-14 w-auto max-w-full"
+            />
+            <p className="mt-5 text-sm text-orange-400">
+              {connectedBrands.foundation.tagline}
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
               {connectedBrands.foundation.blurb}
             </p>
             <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/60">
