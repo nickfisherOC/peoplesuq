@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
+import { StoryFormProvider } from "@/components/story-form/StoryFormProvider";
+import StoryFormModal from "@/components/story-form/StoryFormModal";
 import { site } from "@/lib/site";
 
 const archivo = Archivo({
@@ -78,10 +80,13 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <CartProvider>
-          <Header />
-          <main id="main">{children}</main>
-          <Footer />
-          <CartDrawer />
+          <StoryFormProvider>
+            <Header />
+            <main id="main">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <StoryFormModal />
+          </StoryFormProvider>
         </CartProvider>
       </body>
     </html>

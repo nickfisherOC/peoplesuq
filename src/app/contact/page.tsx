@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import { contact, social, connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,7 +10,16 @@ export const metadata: Metadata = {
   description: "Get in touch with People Suq.",
 };
 
-const channels = [
+interface Channel {
+  title: string;
+  body: string;
+  cta: string;
+  href?: string;
+  /** Opens the "Tell Us Your Story" modal instead of navigating. */
+  story?: boolean;
+}
+
+const channels: Channel[] = [
   {
     title: "General",
     body: "Questions, ideas, or just want to say hello.",
@@ -19,8 +29,8 @@ const channels = [
   {
     title: "Share a story",
     body: "Tell us about your experience or someone doing meaningful work.",
-    cta: contact.storyEmail,
-    href: `mailto:${contact.storyEmail}`,
+    cta: "Tell Us Your Story",
+    story: true,
   },
   {
     title: "Follow along",
@@ -50,9 +60,19 @@ export default function ContactPage() {
               <p className="mt-2 flex-1 leading-relaxed text-white/60">
                 {c.body}
               </p>
-              <Button href={c.href} variant="secondary" className="mt-5 self-start">
-                {c.cta}
-              </Button>
+              {c.story ? (
+                <ShareStoryButton variant="secondary" className="mt-5 self-start">
+                  {c.cta}
+                </ShareStoryButton>
+              ) : (
+                <Button
+                  href={c.href ?? "#"}
+                  variant="secondary"
+                  className="mt-5 self-start"
+                >
+                  {c.cta}
+                </Button>
+              )}
             </div>
           ))}
         </div>

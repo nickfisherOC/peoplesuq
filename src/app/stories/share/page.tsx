@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
-import { contact } from "@/lib/site";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 
 export const metadata: Metadata = {
   title: "Share Your Story",
@@ -33,9 +33,7 @@ export default function ShareStoryPage() {
         title="Your story could be the one someone needs to hear"
         intro="People Suq exists because real people were willing to talk openly. If you have a story about recovery, mental health, community, or a second chance, we want to listen."
       >
-        <Button href={`mailto:${contact.storyEmail}`} size="lg">
-          Email us your story
-        </Button>
+        <ShareStoryButton size="lg">Tell Us Your Story</ShareStoryButton>
       </PageHeader>
 
       <Section tone="charcoal">
@@ -60,28 +58,15 @@ export default function ShareStoryPage() {
             Ready when you are
           </h2>
           <p className="mt-4 leading-relaxed text-white/65">
-            Send us a note at{" "}
-            <a
-              href={`mailto:${contact.storyEmail}`}
-              className="text-orange-400 underline underline-offset-4"
-            >
-              {contact.storyEmail}
-            </a>{" "}
-            with a little about you and what you&apos;d like to share. A person —
-            not a bot — will get back to you.
+            It takes a minute. Tell us a little about you and what you&apos;d
+            like to share — a real person, not a bot, will get back to you.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button href={`mailto:${contact.storyEmail}`} size="lg">
-              Start the conversation
-            </Button>
+            <ShareStoryButton size="lg">Tell Us Your Story</ShareStoryButton>
             <Button href="/stories" variant="secondary" size="lg">
               Read other stories
             </Button>
           </div>
-          <p className="mt-6 text-xs text-white/35">
-            A guided submission form can be connected here later (form backend
-            or CMS integration).
-          </p>
         </div>
       </Section>
     </>

@@ -3,12 +3,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Section from "@/components/Section";
 import VideoPlayer from "@/components/VideoPlayer";
-import Button from "@/components/Button";
 import StoryCard from "@/components/cards/StoryCard";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import { Badge, Eyebrow } from "@/components/ui";
 import { stories, getStory } from "@/content/stories";
 import { getIssue } from "@/content/issues";
-import { contact } from "@/lib/site";
 
 export function generateStaticParams() {
   return stories.map((s) => ({ slug: s.slug }));
@@ -93,10 +92,7 @@ export default async function StoryPage({
                 love to hear from you.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Button href="/stories/share">Share your story</Button>
-                <Button href={`mailto:${contact.storyEmail}`} variant="secondary">
-                  Email us
-                </Button>
+                <ShareStoryButton>Tell Us Your Story</ShareStoryButton>
               </div>
             </div>
           </div>

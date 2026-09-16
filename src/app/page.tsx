@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
 import FeaturedEpisode from "@/components/FeaturedEpisode";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import { SectionHeading, Eyebrow } from "@/components/ui";
 import IssueCard from "@/components/cards/IssueCard";
 import StoryCard from "@/components/cards/StoryCard";
@@ -199,9 +200,9 @@ export default async function HomePage() {
             <Button href="/get-involved" size="lg">
               Join the Conversation
             </Button>
-            <Button href="/stories/share" variant="secondary" size="lg">
-              Share your story
-            </Button>
+            <ShareStoryButton variant="secondary" size="lg">
+              Tell Us Your Story
+            </ShareStoryButton>
           </div>
           <p className="mt-6 text-sm text-white/40">
             Prefer to just listen?{" "}

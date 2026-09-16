@@ -5,6 +5,7 @@ import FeaturedEpisode from "@/components/FeaturedEpisode";
 import PodcastBrowser from "@/components/PodcastBrowser";
 import HostCard from "@/components/HostCard";
 import Button from "@/components/Button";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import { Eyebrow } from "@/components/ui";
 import { episodesByNewest, latestEpisode } from "@/content/episodes";
 import { issues } from "@/content/issues";
@@ -86,7 +87,9 @@ export default function PodcastPage() {
               from you.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Button href="/stories/share">Apply to be a guest</Button>
+              <ShareStoryButton topic="Podcast guest">
+                Apply to be a guest
+              </ShareStoryButton>
               <Button href={`mailto:${contact.email}`} variant="secondary">
                 Email us
               </Button>

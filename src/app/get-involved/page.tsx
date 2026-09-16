@@ -2,7 +2,18 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import { social, listenLinks, connectedBrands, contact } from "@/lib/site";
+
+interface Action {
+  title: string;
+  body: string;
+  cta: string;
+  href?: string;
+  primary?: boolean;
+  /** Opens the "Tell Us Your Story" modal instead of navigating. */
+  story?: boolean;
+}
 
 export const metadata: Metadata = {
   title: "Get Involved",
@@ -10,7 +21,7 @@ export const metadata: Metadata = {
     "Join the conversation. Watch the podcast, share your story, follow People Suq, support community initiatives, or shop merch that carries the message.",
 };
 
-const actions = [
+const actions: Action[] = [
   {
     title: "Watch & share the podcast",
     body: "The easiest way in. Watch an episode, then send it to someone who needs it.",
@@ -21,8 +32,8 @@ const actions = [
   {
     title: "Share your story",
     body: "Your experience could be the thing that helps someone else feel less alone.",
-    cta: "Share your story",
-    href: "/stories/share",
+    cta: "Tell Us Your Story",
+    story: true,
     primary: true,
   },
   {
@@ -63,9 +74,9 @@ export default function GetInvolvedPage() {
           <Button href={listenLinks.youtube} size="lg">
             Watch on YouTube
           </Button>
-          <Button href="/stories/share" variant="secondary" size="lg">
-            Share your story
-          </Button>
+          <ShareStoryButton variant="secondary" size="lg">
+            Tell Us Your Story
+          </ShareStoryButton>
         </div>
       </PageHeader>
 
@@ -80,13 +91,22 @@ export default function GetInvolvedPage() {
               <p className="mt-2 flex-1 leading-relaxed text-white/60">
                 {a.body}
               </p>
-              <Button
-                href={a.href}
-                variant={a.primary ? "primary" : "secondary"}
-                className="mt-5 self-start"
-              >
-                {a.cta}
-              </Button>
+              {a.story ? (
+                <ShareStoryButton
+                  variant={a.primary ? "primary" : "secondary"}
+                  className="mt-5 self-start"
+                >
+                  {a.cta}
+                </ShareStoryButton>
+              ) : (
+                <Button
+                  href={a.href ?? "#"}
+                  variant={a.primary ? "primary" : "secondary"}
+                  className="mt-5 self-start"
+                >
+                  {a.cta}
+                </Button>
+              )}
             </div>
           ))}
         </div>

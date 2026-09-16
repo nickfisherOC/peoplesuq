@@ -85,3 +85,24 @@ export const contact = {
   email: "info@suqmedia.com",
   storyEmail: "info@suqmedia.com",
 } as const;
+
+/**
+ * "Tell Us Your Story" pop-up form.
+ *
+ * The site-wide modal is already built and wired to every "share your story"
+ * CTA. Right now it shows our own branded fields. To connect Growtheon, set
+ * ONE of these (whichever Growtheon gives you):
+ *   - embedUrl:  a Growtheon hosted-form URL → the modal shows it in an iframe
+ *                (its own fields/validation/delivery). Simplest.
+ *   - endpoint:  a Growtheon form/submit URL → our branded fields POST to it.
+ * If both are empty, the modal still works and falls back to the contact email
+ * so a visitor is never at a dead end.
+ */
+export const storyForm = {
+  /** Growtheon hosted-form URL (iframe). Leave "" until it's created. */
+  embedUrl: "",
+  /** Iframe height in px — tune once the real Growtheon form exists. */
+  embedHeight: 680,
+  /** Growtheon submit endpoint for our own fields (alternative to embedUrl). */
+  endpoint: "",
+} as const;

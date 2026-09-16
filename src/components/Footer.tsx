@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import StoryLink from "./story-form/StoryLink";
 import {
   site,
   mainNav,
   connectedBrands,
   social,
   listenLinks,
-  contact,
 } from "@/lib/site";
 
 const socialLinks = [
@@ -112,12 +112,9 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="text-white/70 hover:text-white"
-                >
+                <StoryLink className="text-white/70 hover:text-white">
                   Contact
-                </a>
+                </StoryLink>
               </li>
             </ul>
           </div>
@@ -143,9 +140,7 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-white/80">
               Terms
             </Link>
-            <Link href="/contact" className="hover:text-white/80">
-              Contact
-            </Link>
+            <StoryLink className="hover:text-white/80">Contact</StoryLink>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
-import Button from "@/components/Button";
+import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 import FeaturedStory from "@/components/FeaturedStory";
 import StoriesFeed from "@/components/StoriesFeed";
 import { storiesByNewest } from "@/content/stories";
@@ -23,7 +23,7 @@ export default function StoriesPage() {
         title="Real stories from real people"
         intro="Real people, on camera. Recovery, community, second chances, and the organizations making a difference — told in their own words, documentary-style."
       >
-        <Button href="/stories/share">Share your story</Button>
+        <ShareStoryButton>Tell Us Your Story</ShareStoryButton>
       </PageHeader>
 
       {featured && (
