@@ -105,9 +105,11 @@ export default function StoryFormModal() {
       {/* Panel */}
       <div
         ref={dialogRef}
-        className="relative my-8 w-full max-w-lg rounded-2xl border border-white/10 bg-charcoal shadow-2xl"
+        className={`relative my-6 w-full max-w-lg rounded-2xl border border-white/10 bg-charcoal shadow-2xl ${
+          usingEmbed ? "flex h-[min(760px,85vh)] flex-col overflow-hidden" : ""
+        }`}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-white/10 p-6">
+        <div className="flex shrink-0 items-start justify-between gap-4 border-b border-white/10 p-6">
           <div>
             <h2 className="headline text-2xl text-white">Tell Us Your Story</h2>
             <p className="mt-1 text-sm text-white/60">
@@ -125,14 +127,13 @@ export default function StoryFormModal() {
           </button>
         </div>
 
-        {/* Growtheon iframe once embedUrl is set */}
+        {/* Growtheon / LeadRescue iframe once embedUrl is set */}
         {usingEmbed ? (
-          <div className="p-2">
+          <div className="min-h-0 flex-1 p-2">
             <iframe
               src={storyForm.embedUrl}
               title="Tell us your story"
-              className="w-full rounded-xl"
-              style={{ height: `${storyForm.embedHeight}px` }}
+              className="h-full w-full rounded-xl"
               loading="lazy"
             />
           </div>

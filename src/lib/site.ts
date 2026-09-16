@@ -99,10 +99,10 @@ export const contact = {
  * so a visitor is never at a dead end.
  */
 export const storyForm = {
-  /** Growtheon hosted-form URL (iframe). Leave "" until it's created. */
-  embedUrl: "",
-  /** Iframe height in px — tune once the real Growtheon form exists. */
+  /** Growtheon / LeadRescue Pro hosted-form URL (shown in an iframe). */
+  embedUrl: "https://app.leadrescue.pro/embed/form/4de19bee-58cc-4eff-b662-02797dab5b82",
+  /** Iframe height in px — tune to fit the real form. */
   embedHeight: 680,
-  /** Growtheon submit endpoint for our own fields (alternative to embedUrl). */
+  /** Alternative: a submit endpoint for our own fields (unused when embedUrl set). */
   endpoint: "",
 } as const;
