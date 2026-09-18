@@ -7,7 +7,25 @@ import { CartProvider } from "@/components/cart/CartProvider";
 import CartDrawer from "@/components/cart/CartDrawer";
 import { StoryFormProvider } from "@/components/story-form/StoryFormProvider";
 import StoryFormModal from "@/components/story-form/StoryFormModal";
-import { site } from "@/lib/site";
+import { site, location } from "@/lib/site";
+
+// Organization structured data (helps search engines associate People Suq with
+// its Calgary location). Reads the address from lib/site so it stays in sync.
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  url: site.url,
+  logo: `${site.url}/images/podcast-logo.jpg`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: location.street,
+    addressLocality: location.city,
+    addressRegion: location.region,
+    postalCode: location.postalCode,
+    addressCountry: "CA",
+  },
+};
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -79,6 +97,10 @@ export default function RootLayout({
         className="min-h-screen bg-ink antialiased"
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <CartProvider>
           <StoryFormProvider>
             <Header />

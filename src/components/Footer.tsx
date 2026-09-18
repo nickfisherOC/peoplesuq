@@ -7,6 +7,8 @@ import {
   connectedBrands,
   social,
   listenLinks,
+  location,
+  mapDirectionsUrl,
 } from "@/lib/site";
 
 const socialLinks = [
@@ -36,6 +38,18 @@ export default function Footer() {
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
               {site.mission}
             </p>
+            <a
+              href={mapDirectionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 block text-sm not-italic leading-relaxed text-white/50 hover:text-white/80"
+            >
+              <address className="not-italic">
+                {location.street}
+                <br />
+                {location.city}, {location.region} {location.postalCode}
+              </address>
+            </a>
             <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
               {socialLinks.map((s) => (
                 <a

@@ -3,7 +3,15 @@ import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
 import ShareStoryButton from "@/components/story-form/ShareStoryButton";
-import { contact, social, connectedBrands } from "@/lib/site";
+import {
+  contact,
+  social,
+  connectedBrands,
+  location,
+  locationString,
+  mapEmbedUrl,
+  mapDirectionsUrl,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -88,6 +96,36 @@ export default function ContactPage() {
             Visit SUQ MEDIA ↗
           </a>
         </p>
+      </Section>
+
+      {/* Visit us */}
+      <Section tone="ink">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="flex flex-col justify-center">
+            <p className="eyebrow text-orange-500">Visit us</p>
+            <h2 className="headline mt-4 text-3xl text-white md:text-4xl">
+              Find us in Calgary
+            </h2>
+            <address className="mt-5 text-lg not-italic leading-relaxed text-white/75">
+              {location.street}
+              <br />
+              {location.city}, {location.region} {location.postalCode}
+            </address>
+            <div className="mt-6">
+              <Button href={mapDirectionsUrl}>Get directions →</Button>
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-white/10">
+            <iframe
+              src={mapEmbedUrl}
+              title={`Map to People Suq, ${locationString}`}
+              className="h-full min-h-[320px] w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
       </Section>
     </>
   );

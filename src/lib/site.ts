@@ -87,6 +87,29 @@ export const contact = {
 } as const;
 
 /**
+ * Physical location (single source of truth for Contact, Footer, and the
+ * Organization structured data). Edit here and it updates everywhere.
+ */
+export const location = {
+  street: "5534 1A Street SW",
+  city: "Calgary",
+  region: "AB",
+  postalCode: "T2H 0E7",
+  country: "Canada",
+} as const;
+
+/** "5534 1A Street SW, Calgary, AB T2H 0E7" */
+export const locationString = `${location.street}, ${location.city}, ${location.region} ${location.postalCode}`;
+
+/** Google Maps embed (no API key) + a "get directions" link. */
+export const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(
+  locationString,
+)}&output=embed`;
+export const mapDirectionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  locationString,
+)}`;
+
+/**
  * "Tell Us Your Story" pop-up form.
  *
  * The site-wide modal is already built and wired to every "share your story"
