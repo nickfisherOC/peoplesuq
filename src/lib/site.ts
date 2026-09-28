@@ -86,6 +86,12 @@ export const contact = {
   storyEmail: "info@suqmedia.com",
 } as const;
 
+/** Analytics IDs (public — safe in client). */
+export const analytics = {
+  gtmId: "GTM-T3Z78FF3",
+  gaId: "G-DMN74ERKKT",
+} as const;
+
 /**
  * Physical location (single source of truth for Contact, Footer, and the
  * Organization structured data). Edit here and it updates everywhere.
