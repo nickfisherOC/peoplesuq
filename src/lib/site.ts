@@ -90,6 +90,7 @@ export const contact = {
 export const analytics = {
   gtmId: "GTM-T3Z78FF3",
   gaId: "G-DMN74ERKKT",
+  metaPixelId: "950355134789220",
 } as const;
 
 /**
