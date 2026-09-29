@@ -21,6 +21,7 @@ export const partners: Partner[] = [
   {
     name: "Recovery Acres Calgary Society",
     logo: { src: "/images/partners/recovery-acres.png", alt: "Recovery Acres Calgary Society" },
+    href: "https://recoveryacres.org",
   },
   {
     name: "Community Kitchen",
