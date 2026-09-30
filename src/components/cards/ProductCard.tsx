@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
         label={product.name}
         aspect="square"
         rounded={false}
-        sizes="(max-width: 768px) 50vw, 25vw"
+        sizes="(max-width: 639px) 40vw, (max-width: 1024px) 50vw, 25vw"
       />
       {product.isPlaceholder && (
         <PlaceholderTag className="absolute left-3 top-3" />
@@ -36,38 +36,37 @@ export default function ProductCard({ product }: { product: Product }) {
   );
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-charcoal transition-colors hover:border-white/25">
+    // Mobile: compact horizontal row (image left, details right) so there is one
+    // product per row. sm+ : classic vertical card in the responsive grid.
+    <article className="group flex overflow-hidden rounded-2xl border border-white/10 bg-charcoal transition-colors hover:border-white/25 sm:flex-col">
       {product.shopUrl ? (
         <a
           href={product.shopUrl}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${product.name}`}
+          className="w-32 shrink-0 self-stretch sm:w-full"
         >
           {media}
         </a>
       ) : (
-        media
+        <div className="w-32 shrink-0 self-stretch sm:w-full">{media}</div>
       )}
 
-      <div className="flex flex-1 flex-col p-5">
-        <div className="flex items-start justify-between gap-3">
-          <h3 className="text-base font-bold leading-snug text-white">
-            {product.name}
-          </h3>
-          {product.price && (
-            <span className="shrink-0 font-semibold text-orange-400">
-              {product.price}
-            </span>
-          )}
-        </div>
+      <div className="flex flex-1 flex-col p-4 sm:p-5">
+        <h3 className="text-base font-bold leading-snug text-white">
+          {product.name}
+        </h3>
+        {product.price && (
+          <p className="mt-1 font-semibold text-orange-400">{product.price}</p>
+        )}
         {product.cause && (
-          <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-white/55">
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/55 sm:line-clamp-3">
             {product.cause}
           </p>
         )}
 
-        <div className="mt-5">
+        <div className="mt-4 sm:mt-5">
           {purchasable && product.variantId ? (
             <AddToCartButton
               variantId={product.variantId}

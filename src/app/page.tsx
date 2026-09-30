@@ -177,7 +177,7 @@ export default async function HomePage() {
             Shop all
           </Button>
         </div>
-        <div className="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featuredProducts.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
