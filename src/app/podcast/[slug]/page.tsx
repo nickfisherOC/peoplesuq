@@ -27,6 +27,7 @@ export async function generateMetadata({
   return {
     title: `${episode.title} — Episode ${episode.number}`,
     description: episode.summary,
+    alternates: { canonical: `/podcast/${slug}` },
   };
 }
 

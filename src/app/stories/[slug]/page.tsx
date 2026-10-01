@@ -21,7 +21,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const story = getStory(slug);
   if (!story) return { title: "Story not found" };
-  return { title: story.title, description: story.teaser };
+  return {
+    title: story.title,
+    description: story.teaser,
+    alternates: { canonical: `/stories/${slug}` },
+  };
 }
 
 export default async function StoryPage({

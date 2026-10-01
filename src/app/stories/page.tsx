@@ -9,6 +9,7 @@ import { issues } from "@/content/issues";
 
 export const metadata: Metadata = {
   title: "Stories",
+  alternates: { canonical: "/stories" },
   description:
     "Real stories from real people — recovery, community, second chances, interviews, and profiles of organizations making a difference.",
 };

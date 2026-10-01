@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
 import Section from "@/components/Section";
@@ -13,6 +14,12 @@ import { latestEpisode } from "@/content/episodes";
 import { storiesByNewest } from "@/content/stories";
 import { getMerch } from "@/lib/merch";
 import { connectedBrands } from "@/lib/site";
+
+// Self-referencing canonical for the homepage. Resolves against metadataBase
+// (the www canonical host) → https://www.peoplesuq.com/.
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function HomePage() {
   const featuredStories = storiesByNewest.slice(0, 3);

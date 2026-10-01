@@ -10,7 +10,11 @@ export const site = {
   name: "People Suq",
   shortName: "People Suq",
   domain: "peoplesuq.com",
-  url: "https://peoplesuq.com",
+  // Canonical host. The apex (peoplesuq.com) 308-redirects to www on Vercel, so
+  // www is the single canonical origin used for metadataBase, canonical tags,
+  // og:url, JSON-LD, the sitemap and robots.txt. Change here and it flows
+  // everywhere.
+  url: "https://www.peoplesuq.com",
   tagline: "Real People. Real Conversations.",
   description:
     "People Suq is a media and community platform bringing attention to the issues affecting our communities — through stories, conversations, media, and action.",

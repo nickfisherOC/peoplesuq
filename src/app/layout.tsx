@@ -77,7 +77,10 @@ export const metadata: Metadata = {
     images: ["/images/podcast-logo.jpg"],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "/" },
+  // NOTE: no canonical here on purpose. A canonical set at the root layout is
+  // inherited by every child route, which would point them all at "/" (the
+  // homepage) and make Google treat them as duplicates. Each page declares its
+  // own self-referencing canonical instead (see the per-page `alternates`).
 };
 
 export const viewport: Viewport = {

@@ -8,6 +8,7 @@ import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Merch",
+  alternates: { canonical: "/merch" },
   description:
     "Cause-driven People Suq merch — identity, awareness, and support for the message. Distinct from SUQ MEDIA custom apparel.",
 };

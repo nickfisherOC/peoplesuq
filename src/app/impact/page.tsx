@@ -11,6 +11,7 @@ import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impact",
+  alternates: { canonical: "/impact" },
   description:
     "How People Suq connects awareness with community impact — alongside SUQ MEDIA and the Markin K Kossowski Foundation.",
 };

@@ -6,6 +6,8 @@ import { stories } from "@/content/stories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  // Only indexable, 200-status pages belong in the sitemap. /privacy and /terms
+  // are intentionally excluded because robots.txt disallows them.
   const staticRoutes = [
     "",
     "/podcast",
@@ -17,8 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/get-involved",
     "/contact",
-    "/privacy",
-    "/terms",
   ].map((path) => ({
     url: `${site.url}${path}`,
     lastModified: now,

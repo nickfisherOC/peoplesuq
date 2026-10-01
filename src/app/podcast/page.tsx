@@ -14,6 +14,7 @@ import { listenLinks, contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Podcast",
+  alternates: { canonical: "/podcast" },
   description:
     "The People Suq podcast — real conversations about recovery, mental health, healing, and the human experience. Season One coming soon. Watch or listen.",
 };

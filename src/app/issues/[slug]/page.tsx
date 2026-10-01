@@ -22,7 +22,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const issue = getIssue(slug);
   if (!issue) return { title: "Issue not found" };
-  return { title: issue.title, description: issue.summary };
+  return {
+    title: issue.title,
+    description: issue.summary,
+    alternates: { canonical: `/issues/${slug}` },
+  };
 }
 
 export default async function IssuePage({

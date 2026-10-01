@@ -6,6 +6,7 @@ import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 
 export const metadata: Metadata = {
   title: "Share Your Story",
+  alternates: { canonical: "/stories/share" },
   description:
     "People Suq is built on real voices. Share your story of recovery, community, or a second chance.",
 };

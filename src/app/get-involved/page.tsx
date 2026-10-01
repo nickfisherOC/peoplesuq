@@ -17,6 +17,7 @@ interface Action {
 
 export const metadata: Metadata = {
   title: "Get Involved",
+  alternates: { canonical: "/get-involved" },
   description:
     "Join the conversation. Watch the podcast, share your story, follow People Suq, support community initiatives, or shop merch that carries the message.",
 };

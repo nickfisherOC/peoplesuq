@@ -6,6 +6,7 @@ import { issues } from "@/content/issues";
 
 export const metadata: Metadata = {
   title: "Issues",
+  alternates: { canonical: "/issues" },
   description:
     "The community issues People Suq covers — addiction & recovery, mental health, poverty & homelessness, treatment, food insecurity, and second chances.",
 };

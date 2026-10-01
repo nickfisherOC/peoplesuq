@@ -10,6 +10,7 @@ import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
+  alternates: { canonical: "/about" },
   description:
     "Why People Suq exists, what it stands for, and how it connects to SUQ MEDIA and the Markin K Kossowski Foundation.",
 };
