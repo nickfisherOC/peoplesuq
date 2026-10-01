@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -17,7 +18,7 @@ interface Action {
 
 export const metadata: Metadata = {
   title: "Get Involved",
-  alternates: { canonical: "/get-involved" },
+  ...pageSeo("/get-involved"),
   description:
     "Join the conversation. Watch the podcast, share your story, follow People Suq, support community initiatives, or shop merch that carries the message.",
 };

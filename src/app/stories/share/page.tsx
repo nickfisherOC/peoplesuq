@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -6,7 +7,7 @@ import ShareStoryButton from "@/components/story-form/ShareStoryButton";
 
 export const metadata: Metadata = {
   title: "Share Your Story",
-  alternates: { canonical: "/stories/share" },
+  ...pageSeo("/stories/share"),
   description:
     "People Suq is built on real voices. Share your story of recovery, community, or a second chance.",
 };

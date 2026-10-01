@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import Hero from "@/components/home/Hero";
 import Section from "@/components/Section";
@@ -18,7 +19,7 @@ import { connectedBrands } from "@/lib/site";
 // Self-referencing canonical for the homepage. Resolves against metadataBase
 // (the www canonical host) → https://www.peoplesuq.com/.
 export const metadata: Metadata = {
-  alternates: { canonical: "/" },
+  ...pageSeo("/"),
 };
 
 export default async function HomePage() {

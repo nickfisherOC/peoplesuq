@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -8,7 +9,7 @@ import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Merch",
-  alternates: { canonical: "/merch" },
+  ...pageSeo("/merch"),
   description:
     "Cause-driven People Suq merch — identity, awareness, and support for the message. Distinct from SUQ MEDIA custom apparel.",
 };

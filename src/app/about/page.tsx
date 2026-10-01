@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -10,7 +11,7 @@ import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
-  alternates: { canonical: "/about" },
+  ...pageSeo("/about"),
   description:
     "Why People Suq exists, what it stands for, and how it connects to SUQ MEDIA and the Markin K Kossowski Foundation.",
 };

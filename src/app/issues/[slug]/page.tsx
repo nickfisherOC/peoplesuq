@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import PageHeader from "@/components/PageHeader";
@@ -25,7 +26,7 @@ export async function generateMetadata({
   return {
     title: issue.title,
     description: issue.summary,
-    alternates: { canonical: `/issues/${slug}` },
+    ...pageSeo(`/issues/${slug}`),
   };
 }
 

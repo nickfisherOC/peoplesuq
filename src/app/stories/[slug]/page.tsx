@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Section from "@/components/Section";
@@ -24,7 +25,7 @@ export async function generateMetadata({
   return {
     title: story.title,
     description: story.teaser,
-    alternates: { canonical: `/stories/${slug}` },
+    ...pageSeo(`/stories/${slug}`),
   };
 }
 
