@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import FeaturedEpisode from "@/components/FeaturedEpisode";
@@ -14,6 +15,7 @@ import { listenLinks, contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Podcast",
+  ...pageSeo("/podcast"),
   description:
     "The People Suq podcast — real conversations about recovery, mental health, healing, and the human experience. Season One coming soon. Watch or listen.",
 };

@@ -6,6 +6,8 @@ import { stories } from "@/content/stories";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  // Only indexable, 200-status pages belong in the sitemap. /privacy and /terms
+  // are intentionally excluded because robots.txt disallows them.
   const staticRoutes = [
     "",
     "/podcast",
@@ -17,8 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/get-involved",
     "/contact",
-    "/privacy",
-    "/terms",
   ].map((path) => ({
     url: `${site.url}${path}`,
     lastModified: now,
@@ -29,7 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicRoutes = [
     ...episodes.map((e) => `/podcast/${e.slug}`),
     ...issues.map((i) => `/issues/${i.slug}`),
-    ...stories.map((s) => `/stories/${s.slug}`),
+    // Exclude placeholder/demo stories — they are noindex (see
+    // stories/[slug]/page.tsx) so they must not appear in the sitemap.
+    ...stories.filter((s) => !s.isPlaceholder).map((s) => `/stories/${s.slug}`),
   ].map((path) => ({
     url: `${site.url}${path}`,
     lastModified: now,

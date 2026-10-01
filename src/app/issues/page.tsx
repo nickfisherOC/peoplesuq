@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import IssueCard from "@/components/cards/IssueCard";
@@ -6,6 +7,7 @@ import { issues } from "@/content/issues";
 
 export const metadata: Metadata = {
   title: "Issues",
+  ...pageSeo("/issues"),
   description:
     "The community issues People Suq covers — addiction & recovery, mental health, poverty & homelessness, treatment, food insecurity, and second chances.",
 };

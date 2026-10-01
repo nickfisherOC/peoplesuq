@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import ShareStoryButton from "@/components/story-form/ShareStoryButton";
@@ -9,6 +10,7 @@ import { issues } from "@/content/issues";
 
 export const metadata: Metadata = {
   title: "Stories",
+  ...pageSeo("/stories"),
   description:
     "Real stories from real people — recovery, community, second chances, interviews, and profiles of organizations making a difference.",
 };

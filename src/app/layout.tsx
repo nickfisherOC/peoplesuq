@@ -9,6 +9,7 @@ import CartDrawer from "@/components/cart/CartDrawer";
 import { StoryFormProvider } from "@/components/story-form/StoryFormProvider";
 import StoryFormModal from "@/components/story-form/StoryFormModal";
 import { site, location, analytics } from "@/lib/site";
+import { sharedOpenGraph } from "@/lib/seo";
 
 // Organization structured data (helps search engines associate People Suq with
 // its Calgary location). Reads the address from lib/site so it stays in sync.
@@ -60,16 +61,12 @@ export const metadata: Metadata = {
     "second chances",
     "SUQ MEDIA",
   ],
-  openGraph: {
-    type: "website",
-    siteName: site.name,
-    title: `${site.name} — ${site.tagline}`,
-    description: site.description,
-    url: site.url,
-    images: [
-      { url: "/images/podcast-logo.jpg", width: 1200, height: 1200, alt: site.name },
-    ],
-  },
+  // Shared Open Graph (image, site name, type, title, description) lives in
+  // lib/seo so each page can set a self-referencing og:url without dropping it
+  // (Next.js replaces, not deep-merges, a child openGraph). The default url here
+  // (the homepage) only applies to routes that don't set their own — i.e. the
+  // non-indexable /privacy and /terms.
+  openGraph: { ...sharedOpenGraph, url: "/" },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.tagline}`,
@@ -77,7 +74,10 @@ export const metadata: Metadata = {
     images: ["/images/podcast-logo.jpg"],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: "/" },
+  // NOTE: no canonical here on purpose. A canonical set at the root layout is
+  // inherited by every child route, which would point them all at "/" (the
+  // homepage) and make Google treat them as duplicates. Each page declares its
+  // own self-referencing canonical instead (see the per-page `alternates`).
 };
 
 export const viewport: Viewport = {

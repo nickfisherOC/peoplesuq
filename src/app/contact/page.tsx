@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
@@ -15,6 +16,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Contact",
+  ...pageSeo("/contact"),
   description: "Get in touch with People Suq.",
 };
 
