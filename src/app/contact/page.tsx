@@ -15,9 +15,10 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   ...pageSeo("/contact"),
-  description: "Get in touch with People Suq.",
+  description:
+    "Contact People Suq about podcast guest opportunities, partnerships, media enquiries or sharing your story. Get in touch with our team.",
 };
 
 interface Channel {

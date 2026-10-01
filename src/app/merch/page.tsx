@@ -8,10 +8,10 @@ import { getMerch } from "@/lib/merch";
 import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Merch",
+  title: { absolute: "People Suq Merch" },
   ...pageSeo("/merch"),
   description:
-    "Cause-driven People Suq merch — identity, awareness, and support for the message. Distinct from SUQ MEDIA custom apparel.",
+    "Cause-driven People Suq apparel that starts conversations. Wear the message. Distinct from SUQ MEDIA custom apparel.",
 };
 
 export default async function MerchPage() {

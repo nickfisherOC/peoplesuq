@@ -6,10 +6,10 @@ import IssueCard from "@/components/cards/IssueCard";
 import { issues } from "@/content/issues";
 
 export const metadata: Metadata = {
-  title: "Issues",
+  title: "The Issues We Cover",
   ...pageSeo("/issues"),
   description:
-    "The community issues People Suq covers — addiction & recovery, mental health, poverty & homelessness, treatment, food insecurity, and second chances.",
+    "Addiction, mental health, homelessness, food insecurity and second chances: the issues People Suq covers through stories, episodes and conversation.",
 };
 
 export default function IssuesPage() {

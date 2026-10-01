@@ -20,6 +20,8 @@ import { connectedBrands } from "@/lib/site";
 // (the www canonical host) → https://www.peoplesuq.com/.
 export const metadata: Metadata = {
   ...pageSeo("/"),
+  description:
+    "People Suq brings attention to addiction, recovery, mental health and homelessness through conversations, community initiatives and stories in development.",
 };
 
 export default async function HomePage() {

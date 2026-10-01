@@ -14,10 +14,10 @@ import { hosts } from "@/content/people";
 import { listenLinks, contact } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Podcast",
+  title: { absolute: "People Suq Podcast" },
   ...pageSeo("/podcast"),
   description:
-    "The People Suq podcast — real conversations about recovery, mental health, healing, and the human experience. Season One coming soon. Watch or listen.",
+    "The People Suq podcast: real conversations about recovery, mental health, healing and the human experience. Season One coming soon. Watch or listen.",
 };
 
 const guestCriteria = [

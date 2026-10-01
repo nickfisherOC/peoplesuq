@@ -23,6 +23,9 @@ export interface Issue {
   shortTitle: string;
   /** One-line summary for cards. */
   summary: string;
+  /** Optional SEO-only meta description (falls back to `summary`). Not shown on
+   *  the page — keeps metadata wording separate from the visible card copy. */
+  seoDescription?: string;
   /** Longer editorial intro for the issue's own page. */
   intro: string;
   image: ImageRef;
@@ -42,6 +45,9 @@ export interface Episode {
   /** ISO date string. Omit for unreleased episodes. */
   date?: string;
   summary: string;
+  /** Optional SEO-only meta description (falls back to `summary`). Not shown on
+   *  the page — keeps metadata wording separate from the visible summary. */
+  seoDescription?: string;
   /** Longer description for the episode page. */
   description?: string;
   /** The show's hosts on this episode (People Suq is host-led). */

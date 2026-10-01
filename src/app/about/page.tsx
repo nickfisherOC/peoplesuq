@@ -10,10 +10,10 @@ import { hosts } from "@/content/people";
 import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Us",
   ...pageSeo("/about"),
   description:
-    "Why People Suq exists, what it stands for, and how it connects to SUQ MEDIA and the Markin K Kossowski Foundation.",
+    "Why People Suq exists, what it stands for, and how it connects to SUQ MEDIA and the Markin K Kossowski Foundation for Hope.",
 };
 
 const values = [
