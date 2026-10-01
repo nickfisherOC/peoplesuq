@@ -22,6 +22,16 @@ export async function generateMetadata({
   const { slug } = await params;
   const story = getStory(slug);
   if (!story) return { title: "Story not found" };
+  // Placeholder/demo stories stay live and crawlable but carry a noindex (so
+  // Google can read the directive) and get no self-canonical to avoid mixed
+  // signals. Real stories get the usual self-referencing canonical + og:url.
+  if (story.isPlaceholder) {
+    return {
+      title: story.title,
+      description: story.teaser,
+      robots: { index: false, follow: true },
+    };
+  }
   return {
     title: story.title,
     description: story.teaser,

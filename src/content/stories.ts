@@ -8,6 +8,11 @@ import type { Story } from "./types";
  * published (empty until then → the player shows a "video coming soon" state).
  * Photography is the poster frame. Replace summaries/videos with real content
  * as it's produced.
+ *
+ * These six are demo/scaffold stories, marked `isPlaceholder: true`: they stay
+ * live and crawlable but carry a `noindex` and are kept out of the sitemap
+ * (see sitemap.ts and stories/[slug]/page.tsx) until replaced with real,
+ * published stories. Clear the flag once a story is real.
  */
 export const stories: Story[] = [
   {
@@ -20,6 +25,7 @@ export const stories: Story[] = [
     image: { src: "/images/person-story-3.png", alt: "Portrait accompanying a recovery story" },
     issues: ["addiction-recovery"],
     format: "watch",
+    isPlaceholder: true,
   },
   {
     slug: "placeholder-community-profile",
@@ -31,6 +37,7 @@ export const stories: Story[] = [
     image: { src: "/images/kitchen-1.jpg", alt: "Volunteers behind a community kitchen" },
     issues: ["food-insecurity", "community-second-chances"],
     format: "watch",
+    isPlaceholder: true,
   },
   {
     slug: "placeholder-second-chance",
@@ -42,6 +49,7 @@ export const stories: Story[] = [
     image: { src: "/images/person-story-1.jpg", alt: "Portrait accompanying a second-chance story" },
     issues: ["community-second-chances"],
     format: "watch",
+    isPlaceholder: true,
   },
   {
     slug: "placeholder-mental-health-interview",
@@ -53,6 +61,7 @@ export const stories: Story[] = [
     image: { src: "/images/person-story-5.jpg", alt: "Portrait accompanying a mental-health interview" },
     issues: ["mental-health", "treatment-support"],
     format: "watch",
+    isPlaceholder: true,
   },
   {
     slug: "placeholder-housing-story",
@@ -64,6 +73,7 @@ export const stories: Story[] = [
     image: { src: "/images/homeless-2.jpg", alt: "A path from the street to stable housing" },
     issues: ["poverty-homelessness", "treatment-support"],
     format: "watch",
+    isPlaceholder: true,
   },
   {
     slug: "placeholder-org-spotlight",
@@ -75,6 +85,7 @@ export const stories: Story[] = [
     image: { src: "/images/community-2.jpg", alt: "An organization doing the quiet work in the community" },
     issues: ["treatment-support", "community-second-chances"],
     format: "watch",
+    isPlaceholder: true,
   },
 ];
 
