@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!issue) return { title: "Issue not found" };
   return {
     title: issue.title,
-    description: issue.summary,
+    description: issue.seoDescription ?? issue.summary,
     ...pageSeo(`/issues/${slug}`),
   };
 }

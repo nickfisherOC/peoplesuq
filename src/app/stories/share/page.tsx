@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Share Your Story",
   ...pageSeo("/stories/share"),
   description:
-    "People Suq is built on real voices. Share your story of recovery, community, or a second chance.",
+    "Share your story of recovery, community or a second chance with People Suq. Tell us what happened and how to reach you.",
 };
 
 const guidance = [

@@ -11,10 +11,10 @@ import { storiesByNewest } from "@/content/stories";
 import { connectedBrands } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Impact",
+  title: "Community Impact",
   ...pageSeo("/impact"),
   description:
-    "How People Suq connects awareness with community impact — alongside SUQ MEDIA and the Markin K Kossowski Foundation.",
+    "How People Suq turns attention into action, alongside SUQ MEDIA and the Markin K Kossowski Foundation for Hope.",
 };
 
 const roles = [

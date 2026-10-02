@@ -12,6 +12,8 @@ export const issues: Issue[] = [
     shortTitle: "Addiction & Recovery",
     summary:
       "Honest conversations about substance use, the road back, and what recovery actually looks like.",
+    seoDescription:
+      "Honest conversations about substance use, relapse and the road back, and what addiction recovery actually looks like.",
     intro:
       "Addiction touches families in every neighbourhood, yet it's still talked about in whispers. We bring these conversations into the open — the relapse and the comeback, the science and the lived experience, and the people who make recovery possible.",
     image: { src: "/images/addiction-1.jpg", alt: "Addiction & Recovery" },
@@ -22,6 +24,8 @@ export const issues: Issue[] = [
     shortTitle: "Mental Health",
     summary:
       "Real talk about anxiety, depression, trauma, and asking for help before it's a crisis.",
+    seoDescription:
+      "Honest talk about anxiety, depression and trauma: how people cope, where support works, and why asking for help early matters.",
     intro:
       "Mental health is health. We talk about what people actually live with, how they cope, where support works and where the system falls short — without clichés and without shame.",
     image: { src: "/images/mental-health-1.jpg", alt: "Mental Health" },
@@ -32,6 +36,8 @@ export const issues: Issue[] = [
     shortTitle: "Poverty & Homelessness",
     summary:
       "The reality of housing insecurity and life on the edge — beyond the headlines and stereotypes.",
+    seoDescription:
+      "The reality of homelessness and housing insecurity, beyond the headlines and stereotypes, and the people and organizations working on it.",
     intro:
       "Homelessness is rarely one story and never just one choice. We listen to people living it and the organizations working alongside them, and we push past the stereotypes to what's actually happening.",
     image: { src: "/images/homeless-1.avif", alt: "Poverty & Homelessness" },
@@ -42,6 +48,8 @@ export const issues: Issue[] = [
     shortTitle: "Treatment & Support",
     summary:
       "Navigating treatment, medication, and the support systems people rely on to keep going.",
+    seoDescription:
+      "Navigating treatment, medication and the support systems people rely on to keep going, and how getting help really works.",
     intro:
       "Getting help is complicated — programs, waitlists, medication, insurance, and the people who guide you through it. We map how support really works and share what helps.",
     image: { src: "/images/treatment-1.jpeg", alt: "Treatment & Support" },
@@ -52,6 +60,8 @@ export const issues: Issue[] = [
     shortTitle: "Food Insecurity",
     summary:
       "Who goes without, why it happens, and the community efforts feeding neighbours with dignity.",
+    seoDescription:
+      "Who goes without and why, and the community efforts making sure neighbours are fed with dignity.",
     intro:
       "Food insecurity hides in plain sight. We highlight the scale of the problem and the community kitchens, pantries and people making sure no one goes without.",
     image: { src: "/images/food-insecurity-1.jpg", alt: "Food Insecurity" },
@@ -62,6 +72,8 @@ export const issues: Issue[] = [
     shortTitle: "Community & Second Chances",
     summary:
       "Reentry, redemption, and the people proving that where you've been isn't where you end.",
+    seoDescription:
+      "Reentry, redemption and second chances: how people rebuild, and the community support that helps them move forward.",
     intro:
       "Everyone deserves a path forward. We tell stories of second chances — reentry, redemption, and the community support that helps people build something new.",
     image: { src: "/images/community-1.jpg", alt: "Community & Second Chances" },

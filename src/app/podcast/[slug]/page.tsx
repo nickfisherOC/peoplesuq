@@ -27,7 +27,7 @@ export async function generateMetadata({
   if (!episode) return { title: "Episode not found" };
   return {
     title: `${episode.title} — Episode ${episode.number}`,
-    description: episode.summary,
+    description: episode.seoDescription ?? episode.summary,
     ...pageSeo(`/podcast/${slug}`),
   };
 }

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Stories",
   ...pageSeo("/stories"),
   description:
-    "Real stories from real people — recovery, community, second chances, interviews, and profiles of organizations making a difference.",
+    "People Suq is building a collection of stories about recovery, community and second chances. Learn about the project or share your own story.",
 };
 
 export default function StoriesPage() {

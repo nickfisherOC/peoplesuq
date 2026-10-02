@@ -17,6 +17,8 @@ export const episodes: Episode[] = [
     category: "Recovery & Resilience",
     summary:
       "An honest, unfiltered conversation about what it really means to rebuild your life from the ground up — from addiction and trauma to healing, identity, and purpose. The episode that starts it all.",
+    seoDescription:
+      "Rebuilding life from the ground up: addiction, trauma, healing, identity and purpose. Episode 1, coming soon on the People Suq podcast.",
     description:
       "An honest, unfiltered conversation about what it really means to rebuild your life from the ground up — from addiction and trauma to healing, identity, and purpose. This is the episode that starts it all.",
     hosts: [{ name: "Kerry" }, { name: "Krzysztof" }],
@@ -33,6 +35,8 @@ export const episodes: Episode[] = [
     category: "Mental Wellness",
     summary:
       "What healing actually looks like — beyond the buzzwords. Breaking stigma and building emotional resilience, one honest conversation at a time.",
+    seoDescription:
+      "What healing really looks like beyond the buzzwords: breaking stigma and building resilience. Episode 2, coming soon on the People Suq podcast.",
     hosts: [{ name: "Kerry" }],
     issues: ["mental-health"],
     topics: ["Mental health", "Stigma", "Healing"],
@@ -47,6 +51,8 @@ export const episodes: Episode[] = [
     category: "Creativity & Impact",
     summary:
       "How creativity becomes a vehicle for change — using media, work and craft to give back and make a real difference in the community.",
+    seoDescription:
+      "How creativity becomes a vehicle for change through media, work and craft. Episode 3, coming soon on the People Suq podcast.",
     hosts: [{ name: "Krzysztof" }],
     issues: ["community-second-chances"],
     topics: ["Purpose", "Creativity", "Community"],
@@ -61,6 +67,8 @@ export const episodes: Episode[] = [
     category: "Health & Wellness",
     summary:
       "Recovery isn't only mental. A conversation about health, treatment and taking care of the body while you rebuild the rest of your life.",
+    seoDescription:
+      "Recovery isn't only mental: health, treatment and caring for your body while you rebuild. Episode 4, coming soon on the People Suq podcast.",
     hosts: [{ name: "Kerry" }],
     issues: ["treatment-support", "mental-health"],
     topics: ["Health", "Recovery", "Wellbeing"],
@@ -75,6 +83,8 @@ export const episodes: Episode[] = [
     category: "Recovery & Sobriety",
     summary:
       "Honest stories from the path to sobriety — the hard-won lessons, the setbacks, and what actually keeps people well.",
+    seoDescription:
+      "Honest lessons from the path to sobriety: the setbacks and what keeps people well. Episode 5, coming soon on the People Suq podcast.",
     hosts: [{ name: "Kerry" }, { name: "Krzysztof" }],
     issues: ["addiction-recovery"],
     topics: ["Sobriety", "Recovery", "Second chances"],
@@ -89,6 +99,8 @@ export const episodes: Episode[] = [
     category: "Personal Development",
     summary:
       "Who are you after the hardest chapter of your life? A conversation about rebuilding identity, meaning and self-worth after trauma.",
+    seoDescription:
+      "Rebuilding identity, meaning and self-worth after trauma. Episode 6, coming soon on the People Suq podcast.",
     hosts: [{ name: "Kerry" }],
     issues: ["mental-health", "community-second-chances"],
     topics: ["Trauma", "Identity", "Growth"],

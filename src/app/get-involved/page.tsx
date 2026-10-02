@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Get Involved",
   ...pageSeo("/get-involved"),
   description:
-    "Join the conversation. Watch the podcast, share your story, follow People Suq, support community initiatives, or shop merch that carries the message.",
+    "Join the conversation: watch the podcast, share your story, follow People Suq, support community initiatives, or wear the message.",
 };
 
 const actions: Action[] = [
