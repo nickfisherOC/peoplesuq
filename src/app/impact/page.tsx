@@ -207,7 +207,7 @@ export default function ImpactPage() {
               MEDIA, People Suq, and the Foundation. As the commercial arm, SUQ
               MEDIA directs{" "}
               <span className="font-semibold text-white">
-                40% of every dollar it earns
+                40% of its profits
               </span>{" "}
               to the Markin K Kossowski Foundation for Hope. A fuller
               transparency breakdown will live here as the platform grows.
