@@ -168,8 +168,8 @@ export default async function HomePage() {
             </p>
             <p className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white/60">
               SUQ MEDIA directs{" "}
-              <span className="font-semibold text-white">40%</span> of every
-              dollar it earns to the Foundation.
+              <span className="font-semibold text-white">40%</span> of its
+              profits to the Foundation.
             </p>
           </div>
         </div>
