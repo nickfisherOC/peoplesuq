@@ -11,6 +11,14 @@ import { mainNav, connectedBrands } from "@/lib/site";
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  // On statically prerendered routes usePathname() does not match the route at
+  // build time, so the server renders every nav link inactive. Gate the active
+  // state on mount so the first client render matches the server HTML (no
+  // hydration mismatch, React #418); the active indicator appears right after.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close the mobile menu on route change.
   useEffect(() => {
@@ -25,8 +33,10 @@ export default function Header() {
     };
   }, [open]);
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => {
+    if (!mounted) return false;
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50">
