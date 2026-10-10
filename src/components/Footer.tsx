@@ -105,14 +105,12 @@ export default function Footer() {
             <h2 className="eyebrow mb-4 text-white/40">Connected</h2>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a
-                  href={connectedBrands.suqMedia.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/suq-media"
                   className="text-white/70 hover:text-white"
                 >
-                  SUQ MEDIA ↗
-                </a>
+                  SUQ MEDIA
+                </Link>
               </li>
               <li>
                 <a

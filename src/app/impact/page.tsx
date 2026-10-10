@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { pageSeo } from "@/lib/seo";
 import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
@@ -168,6 +170,39 @@ export default function ImpactPage() {
         />
         <div className="mt-10">
           <PartnersStrip />
+        </div>
+
+        {/* Connected with — SUQ MEDIA is the commercial arm, kept distinct from
+            the community partners above. */}
+        <div className="mt-12 border-t border-white/10 pt-8">
+          <p className="eyebrow mb-4 text-white/40">Connected with</p>
+          <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+            <Link
+              href="/suq-media"
+              title="SUQ MEDIA"
+              className="block w-56 shrink-0 transition-opacity hover:opacity-90"
+            >
+              <div className="flex h-24 items-center justify-center rounded-xl bg-white p-5">
+                <Image
+                  src={connectedBrands.suqMedia.logo}
+                  alt="SUQ MEDIA"
+                  width={180}
+                  height={72}
+                  className="max-h-14 w-auto object-contain"
+                  sizes="180px"
+                />
+              </div>
+            </Link>
+            <p className="text-sm leading-relaxed text-white/60">
+              SUQ MEDIA is the commercial studio behind People Suq.{" "}
+              <Link
+                href="/suq-media"
+                className="font-semibold text-orange-400 underline underline-offset-4"
+              >
+                See how we&apos;re connected →
+              </Link>
+            </p>
+          </div>
         </div>
       </Section>
 
