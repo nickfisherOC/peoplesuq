@@ -15,7 +15,6 @@ const socialLinks = [
   { label: "Instagram", href: social.instagram },
   { label: "YouTube", href: social.youtube },
   { label: "TikTok", href: social.tiktok },
-  { label: "X", href: social.x },
   { label: "Facebook", href: social.facebook },
 ];
 
