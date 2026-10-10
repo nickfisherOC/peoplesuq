@@ -27,7 +27,7 @@ export default function LegalPage({
       <Section tone="charcoal">
         <div className="mx-auto max-w-2xl">
           <p className="mb-8 rounded-xl border border-orange-500/30 bg-orange-500/10 px-4 py-3 text-sm text-orange-200">
-            Template placeholder — review and finalize with a qualified
+            Template placeholder. Review and finalize with a qualified
             professional before launch.
           </p>
           <p className="text-sm text-white/40">Last updated: {updated}</p>

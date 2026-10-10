@@ -23,7 +23,7 @@ export default function StoriesPage() {
       <PageHeader
         eyebrow="Stories"
         title="Real stories from real people"
-        intro="Real people, on camera. Recovery, community, second chances, and the organizations making a difference — told in their own words, documentary-style."
+        intro="Real people, on camera. Recovery, community, second chances, and the organizations making a difference, told in their own words, documentary-style."
       >
         <ShareStoryButton>Tell Us Your Story</ShareStoryButton>
       </PageHeader>

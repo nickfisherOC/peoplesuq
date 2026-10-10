@@ -70,7 +70,7 @@ export default function GetInvolvedPage() {
       <PageHeader
         eyebrow="Get involved"
         title="Join the conversation"
-        intro="There's no single way to be part of People Suq. Watch, share, speak up, support, or just show up. However you join — it moves the conversation forward."
+        intro="There's no single way to be part of People Suq. Watch, share, speak up, support, or just show up. However you join, it moves the conversation forward."
       >
         <div className="flex flex-wrap gap-3">
           <Button href={listenLinks.youtube} size="lg">
@@ -120,8 +120,8 @@ export default function GetInvolvedPage() {
             Want to work with us?
           </h2>
           <p className="mt-4 leading-relaxed text-white/70">
-            Guest ideas, partnerships, or an organization doing meaningful work
-            — we&apos;d love to hear from you.
+            Guest ideas, partnerships, or an organization doing meaningful work.
+            We&apos;d love to hear from you.
           </p>
           <Button
             href={`mailto:${contact.email}`}

@@ -13,23 +13,23 @@ export const metadata: Metadata = {
   title: "SUQ MEDIA",
   ...pageSeo("/suq-media"),
   description:
-    "SUQ MEDIA is the Calgary studio behind People Suq — custom apparel, music and video production, studio rental and media services. The business that powers the cause.",
+    "SUQ MEDIA is the Calgary studio behind People Suq. Custom apparel, music and video production, studio rental and media services. The business that powers the cause.",
 };
 
 const services = [
   {
     title: "Custom apparel",
-    body: "Branded apparel, embroidery and print for businesses, teams and causes — the same production that makes People Suq's cause-driven merch.",
+    body: "Branded apparel, embroidery and print for businesses, teams and causes. It's the same production that makes People Suq's cause-driven merch.",
     href: suq.services.customApparel,
   },
   {
     title: "Music & video production",
-    body: "Recording, production and video work — from a single track or spot to a full campaign, shot and finished in-house.",
+    body: "Recording, production and video work, from a single track or spot to a full campaign, shot and finished in-house.",
     href: suq.services.music,
   },
   {
     title: "Studio rental",
-    body: "A real production space to record, film and create in — available to book for your own projects.",
+    body: "A real production space to record, film and create in, available to book for your own projects.",
     href: suq.services.studioRental,
   },
   {
@@ -44,8 +44,8 @@ export default function SuqMediaPage() {
     <>
       <PageHeader
         eyebrow="Connected with"
-        title="SUQ MEDIA — the studio behind People Suq"
-        intro="People Suq is the voice and the cause. SUQ MEDIA is the commercial studio that makes it possible — a Calgary media and apparel business whose work powers this platform and whose profits help fund real community impact."
+        title="SUQ MEDIA, the studio behind People Suq"
+        intro="People Suq is the voice and the cause. SUQ MEDIA is the commercial studio that makes it possible, a Calgary media and apparel business whose work powers this platform and whose profits help fund real community impact."
       >
         <div className="flex flex-wrap gap-3">
           <Button href={suq.href}>Visit SUQ MEDIA ↗</Button>
@@ -65,7 +65,7 @@ export default function SuqMediaPage() {
             </h2>
             <p className="mt-5 leading-relaxed text-white/70">
               {suq.blurb} Based in Calgary, SUQ MEDIA is the working business
-              side of the same mission: it earns, creates and produces — and a
+              side of the same mission. It earns, creates and produces, and a
               share of what it makes goes straight back into the community.
             </p>
             <p className="mt-4 leading-relaxed text-white/70">
@@ -97,7 +97,7 @@ export default function SuqMediaPage() {
         <SectionHeading
           eyebrow="What SUQ MEDIA does"
           title="Apparel, media, and a studio to make it in"
-          intro="The commercial work that funds the mission — and that you can hire for your own brand, team or project."
+          intro="The commercial work that funds the mission, and that you can hire for your own brand, team or project."
         />
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {services.map((s) => (
@@ -132,8 +132,8 @@ export default function SuqMediaPage() {
             <p className="text-sm font-semibold text-orange-400">The business</p>
             <h3 className="mt-1 text-xl font-bold text-white">SUQ MEDIA</h3>
             <p className="mt-3 text-sm leading-relaxed text-white/65">
-              The commercial studio — apparel, media and production — that funds
-              and powers everything else.
+              The commercial studio behind the apparel, media and production
+              that funds and powers everything else.
             </p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-ink/40 p-6">

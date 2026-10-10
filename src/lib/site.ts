@@ -17,7 +17,7 @@ export const site = {
   url: "https://www.peoplesuq.com",
   tagline: "Real People. Real Conversations.",
   description:
-    "People Suq is a media and community platform bringing attention to the issues affecting our communities — through stories, conversations, media, and action.",
+    "People Suq is a media and community platform that brings attention to the issues affecting our communities, through stories, conversations, media and action.",
   // One-line positioning used in the footer and about page.
   mission:
     "We use media and storytelling to talk openly about hard issues, amplify real stories, reduce stigma, and highlight the people and organizations doing meaningful work.",
@@ -45,7 +45,7 @@ export const connectedBrands = {
     href: "https://suqmedia.com/",
     logo: "/images/suqmedia-logo.png",
     blurb:
-      "The commercial arm — custom apparel, music and video production, studio rental and media services.",
+      "The commercial arm. Custom apparel, music and video production, studio rental and media services.",
     // Deep links for when a commercial service is mentioned on People Suq.
     services: {
       customApparel: "https://suqmedia.com/custom-apparel.html",
@@ -61,7 +61,7 @@ export const connectedBrands = {
     logo: "/images/foundation-emblem.svg",
     tagline: "Restoring Hope. Rebuilding Lives.",
     blurb:
-      "A privately funded NGO devoted to people the world too often overlooks — those carrying the weight of mental illness, addiction, poverty, trauma and homelessness — bringing hope, healing and dignity, and reminding everyone that second chances are real.",
+      "A privately funded NGO devoted to people the world too often overlooks, those carrying the weight of mental illness, addiction, poverty, trauma and homelessness. It brings hope, healing and dignity, and reminds everyone that second chances are real.",
   },
 } as const;
 

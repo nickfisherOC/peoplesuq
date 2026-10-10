@@ -67,7 +67,7 @@ export default function StoriesFeed({
         </div>
       ) : (
         <div className="mt-10 rounded-2xl border border-white/10 bg-charcoal p-10 text-center text-white/50">
-          No stories in this issue yet — check back soon.
+          No stories in this issue yet. Check back soon.
         </div>
       )}
     </div>

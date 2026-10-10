@@ -42,8 +42,8 @@ export default function Hero() {
             Real <span className="text-orange-500">Conversations.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-            People Suq brings attention to the issues affecting our communities
-            — through stories, conversations, media, and action.
+            People Suq brings attention to the issues affecting our communities,
+            through stories, conversations, media and action.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/get-involved" size="lg">

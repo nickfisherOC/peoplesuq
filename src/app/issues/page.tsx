@@ -18,7 +18,7 @@ export default function IssuesPage() {
       <PageHeader
         eyebrow="Issues"
         title="The issues we talk about"
-        intro="Each issue is a living hub — a place that gathers episodes, stories, interviews, and resources as the conversation grows."
+        intro="Each issue is a living hub, a place that gathers episodes, stories, interviews, and resources as the conversation grows."
       />
 
       <Section tone="charcoal">

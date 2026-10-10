@@ -103,7 +103,7 @@ export default async function StoryPage({
               <Eyebrow>Have a story like this?</Eyebrow>
               <p className="mt-2 text-white/70">
                 People Suq is built on real voices. Most of our stories are told
-                on camera — if you&apos;d be open to sharing yours, we&apos;d
+                on camera. If you&apos;d be open to sharing yours, we&apos;d
                 love to hear from you.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">

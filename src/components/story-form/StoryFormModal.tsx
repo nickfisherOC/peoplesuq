@@ -113,7 +113,7 @@ export default function StoryFormModal() {
           <div>
             <h2 className="headline text-2xl text-white">Tell Us Your Story</h2>
             <p className="mt-1 text-sm text-white/60">
-              Real voices are the whole point. Share yours — a real person reads
+              Real voices are the whole point. Share yours. A real person reads
               every one, and nothing is published without your say-so.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function StoryFormModal() {
                 name="story"
                 rows={4}
                 className={fieldCls}
-                placeholder="A sentence or a paragraph — however much you want to share."
+                placeholder="A sentence or a paragraph, however much you want to share."
               />
             </Field>
 
@@ -239,8 +239,7 @@ export default function StoryFormModal() {
                   className="text-orange-400 underline"
                 >
                   {contact.storyEmail}
-                </a>{" "}
-                — a real person will reply.
+                </a>. A real person will reply.
               </p>
             )}
 
@@ -284,7 +283,7 @@ function SuccessBlock({ onClose }: { onClose: () => void }) {
       <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-orange-500/15 text-2xl">
         ✓
       </div>
-      <h3 className="text-xl font-bold text-white">Thank you — we&apos;ve got it.</h3>
+      <h3 className="text-xl font-bold text-white">Thank you. We&apos;ve got it.</h3>
       <p className="mt-2 text-sm text-white/65">
         A real person reads every story that comes in. We&apos;ll be in touch.
       </p>

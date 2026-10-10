@@ -154,7 +154,7 @@ export default function CartDrawer() {
             <div className="mb-3 flex items-center justify-between text-sm">
               <span className="text-white/60">Subtotal</span>
               <span className="font-semibold text-white">
-                {cart?.subtotal ?? "—"}
+                {cart?.subtotal ?? "·"}
               </span>
             </div>
             <p className="mb-3 text-xs text-white/40">

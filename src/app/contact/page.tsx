@@ -57,7 +57,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Let's talk"
-        intro="Guests, partnerships, stories, or press — reach out. A person will get back to you."
+        intro="Guests, partnerships, stories, or press. Reach out and a person will get back to you."
       />
 
       <Section tone="charcoal">
