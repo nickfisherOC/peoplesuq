@@ -26,7 +26,7 @@ export async function generateMetadata({
   const episode = getEpisode(slug);
   if (!episode) return { title: "Episode not found" };
   return {
-    title: `${episode.title} — Episode ${episode.number}`,
+    title: `${episode.title}, Episode ${episode.number}`,
     description: episode.seoDescription ?? episode.summary,
     ...pageSeo(`/podcast/${slug}`),
   };
@@ -195,7 +195,7 @@ export default async function EpisodePage({
               <h2 className="eyebrow mb-3 text-white/40">Resources</h2>
               <p className="text-sm leading-relaxed text-white/50">
                 Support lines and organizations relevant to this episode will
-                be listed here. (Placeholder — add real resources per episode.)
+                be listed here. (Placeholder, add real resources per episode.)
               </p>
             </div>
           </aside>

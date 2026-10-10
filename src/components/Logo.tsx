@@ -35,7 +35,7 @@ export default function Logo({
   return (
     <Link
       href="/"
-      aria-label="People Suq — home"
+      aria-label="People Suq home"
       className="inline-flex items-center transition-opacity hover:opacity-90"
     >
       {mark}

@@ -15,7 +15,7 @@ export const issues: Issue[] = [
     seoDescription:
       "Honest conversations about substance use, relapse and the road back, and what addiction recovery actually looks like.",
     intro:
-      "Addiction touches families in every neighbourhood, yet it's still talked about in whispers. We bring these conversations into the open — the relapse and the comeback, the science and the lived experience, and the people who make recovery possible.",
+      "Addiction touches families in every neighbourhood, yet it's still talked about in whispers. We bring these conversations into the open: the relapse and the comeback, the science and the lived experience, and the people who make recovery possible.",
     image: { src: "/images/addiction-1.jpg", alt: "Addiction & Recovery" },
   },
   {
@@ -27,7 +27,7 @@ export const issues: Issue[] = [
     seoDescription:
       "Honest talk about anxiety, depression and trauma: how people cope, where support works, and why asking for help early matters.",
     intro:
-      "Mental health is health. We talk about what people actually live with, how they cope, where support works and where the system falls short — without clichés and without shame.",
+      "Mental health is health. We talk about what people actually live with, how they cope, where support works and where the system falls short, without clichés and without shame.",
     image: { src: "/images/mental-health-1.jpg", alt: "Mental Health" },
   },
   {
@@ -35,7 +35,7 @@ export const issues: Issue[] = [
     title: "Poverty & Homelessness",
     shortTitle: "Poverty & Homelessness",
     summary:
-      "The reality of housing insecurity and life on the edge — beyond the headlines and stereotypes.",
+      "The reality of housing insecurity and life on the edge, beyond the headlines and stereotypes.",
     seoDescription:
       "The reality of homelessness and housing insecurity, beyond the headlines and stereotypes, and the people and organizations working on it.",
     intro:
@@ -51,7 +51,7 @@ export const issues: Issue[] = [
     seoDescription:
       "Navigating treatment, medication and the support systems people rely on to keep going, and how getting help really works.",
     intro:
-      "Getting help is complicated — programs, waitlists, medication, insurance, and the people who guide you through it. We map how support really works and share what helps.",
+      "Getting help is complicated. Programs, waitlists, medication, insurance, and the people who guide you through it. We map how support really works and share what helps.",
     image: { src: "/images/treatment-1.jpeg", alt: "Treatment & Support" },
   },
   {
@@ -75,7 +75,7 @@ export const issues: Issue[] = [
     seoDescription:
       "Reentry, redemption and second chances: how people rebuild, and the community support that helps them move forward.",
     intro:
-      "Everyone deserves a path forward. We tell stories of second chances — reentry, redemption, and the community support that helps people build something new.",
+      "Everyone deserves a path forward. We tell stories of second chances: reentry, redemption, and the community support that helps people build something new.",
     image: { src: "/images/community-1.jpg", alt: "Community & Second Chances" },
   },
 ];

@@ -22,9 +22,9 @@ export const hosts: Host[] = [
     role: "Co-Founder & Host",
     bio: [
       "Kerry's journey through addiction, healing, self-discovery and personal transformation is the heart behind People Suq. With 24 years clean and sober, 13 years of postsecondary education and a lifetime of real-world experience, she brings raw honesty and emotional depth to every conversation.",
-      "Through storytelling and wellness, she hopes to inspire growth, emotional maturity and hope in others — while challenging the mainstream narratives around healing and recovery.",
+      "Through storytelling and wellness, she hopes to inspire growth, emotional maturity and hope in others, while challenging the mainstream narratives around healing and recovery.",
     ],
-    image: { src: "/images/host-kerry.jpg", alt: "Kerry — Co-Founder & Host of People Suq" },
+    image: { src: "/images/host-kerry.jpg", alt: "Kerry, Co-Founder & Host of People Suq" },
   },
   {
     slug: "krzysztof",
@@ -34,7 +34,7 @@ export const hosts: Host[] = [
       "Krzysztof (Kris) leads the audio, video and digital side of People Suq, pairing a background in IT, telecommunications and computer science with a creative eye. He now uses media as a platform for transformation, recovery and social impact.",
       "Having overcome addiction himself, Kris is driven to create authentic content that breaks stigma, encourages healing and gives a voice to stories that matter. Away from the studio, he finds inspiration in woodworking and aviation.",
     ],
-    image: { src: "/images/host-kris.jpg", alt: "Krzysztof — Co-Founder & Host of People Suq" },
+    image: { src: "/images/host-kris.jpg", alt: "Krzysztof, Co-Founder & Host of People Suq" },
   },
 ];
 

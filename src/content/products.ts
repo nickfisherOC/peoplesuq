@@ -17,7 +17,7 @@ export const products: Product[] = [
       "A classic black tee with a bold People Suq slogan. Wear the message and start the conversation.",
     image: {
       src: "/images/merch-people-suq-tee.jpg",
-      alt: "People Suq Tee — black t-shirt with bold People Suq slogan",
+      alt: "People Suq Tee, black t-shirt with bold People Suq slogan",
     },
   },
   {
@@ -27,7 +27,7 @@ export const products: Product[] = [
       "A premium crewneck sweatshirt with a People Suq graphic. Comfortable, understated, and made to be seen.",
     image: {
       src: "/images/merch-people-suq-crewneck.jpg",
-      alt: "People Suq Crewneck — crewneck sweatshirt with People Suq graphic",
+      alt: "People Suq Crewneck, crewneck sweatshirt with People Suq graphic",
     },
   },
 ];

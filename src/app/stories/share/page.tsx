@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const guidance = [
   {
     title: "Tell it your way",
-    body: "There's no right format. A paragraph, a voice note, a video — whatever feels honest. We'll help shape it if you want.",
+    body: "There's no right format. A paragraph, a voice note, a video, whatever feels honest. We'll help shape it if you want.",
   },
   {
     title: "You stay in control",
@@ -61,7 +61,7 @@ export default function ShareStoryPage() {
           </h2>
           <p className="mt-4 leading-relaxed text-white/65">
             It takes a minute. Tell us a little about you and what you&apos;d
-            like to share — a real person, not a bot, will get back to you.
+            like to share, and a real person, not a bot, will get back to you.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <ShareStoryButton size="lg">Tell Us Your Story</ShareStoryButton>

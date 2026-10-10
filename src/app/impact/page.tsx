@@ -66,7 +66,7 @@ export default function ImpactPage() {
           </p>
           <p className="mt-6 leading-relaxed text-white/65">
             We don&apos;t claim to solve these problems alone. We believe honest
-            conversation is where change starts — and we&apos;re built to
+            conversation is where change starts, and we&apos;re built to
             connect that conversation to the organizations and initiatives that
             create impact on the ground.
           </p>
@@ -112,8 +112,8 @@ export default function ImpactPage() {
               Markin K Kossowski Foundation
             </h2>
             <p className="mt-5 leading-relaxed text-white/75">
-              The Foundation represents the community impact side of the mission
-              — supporting causes and initiatives that create real-world change.
+              The Foundation represents the community impact side of the mission,
+              supporting causes and initiatives that create real-world change.
               People Suq highlights and amplifies this work through media and
               storytelling.
             </p>
@@ -139,9 +139,9 @@ export default function ImpactPage() {
               {connectedBrands.foundation.tagline}
             </p>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
-              Their mission: to empower individuals and communities through
-              compassion-driven programs focused on mental health, addiction
-              recovery and sustainable community development.
+              Their mission is to help individuals and communities through
+              programs focused on mental health, addiction recovery and
+              community development.
             </p>
           </div>
         </div>
@@ -224,13 +224,13 @@ export default function ImpactPage() {
                   key={label}
                   className="rounded-xl border border-white/10 bg-ink/40 p-4 text-center"
                 >
-                  <div className="headline text-2xl text-white/30">—</div>
+                  <div className="headline text-2xl text-white/30">·</div>
                   <div className="mt-1 text-xs text-white/50">{label}</div>
                 </div>
               ))}
             </div>
             <p className="mt-3 text-xs text-white/35">
-              Placeholder metrics — real figures added as they&apos;re verified.
+              Placeholder metrics. Real figures added as they&apos;re verified.
             </p>
           </div>
           <div>

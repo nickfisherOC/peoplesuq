@@ -116,7 +116,7 @@ export default async function IssuePage({
             </h2>
             <p className="mt-4 leading-relaxed text-white/60">
               Vetted support lines, articles, and tools for this issue will live
-              here. This section is built to grow — add real resources as
+              here. This section is built to grow. Add real resources as
               they&apos;re confirmed.
             </p>
           </div>
@@ -126,7 +126,7 @@ export default async function IssuePage({
             </h2>
             <p className="mt-4 leading-relaxed text-white/60">
               Local and national organizations doing meaningful work on this
-              issue will be highlighted here. (Placeholder — add real
+              issue will be highlighted here. (Placeholder, add real
               organizations with their consent.)
             </p>
           </div>

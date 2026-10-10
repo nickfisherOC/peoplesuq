@@ -85,7 +85,7 @@ export default function PodcastPage() {
             <p className="mt-5 leading-relaxed text-white/65">
               We&apos;re looking for guests with real stories, lived experience,
               and genuine insight. If you&apos;ve been through something, learned
-              something, or built something worth talking about — we want to hear
+              something, or built something worth talking about, we want to hear
               from you.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">

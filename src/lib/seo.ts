@@ -14,7 +14,7 @@ import { site } from "./site";
 export const sharedOpenGraph = {
   type: "website",
   siteName: site.name,
-  title: `${site.name} — ${site.tagline}`,
+  title: `${site.name}. ${site.tagline}`,
   description: site.description,
   images: [
     { url: "/images/podcast-logo.jpg", width: 1200, height: 1200, alt: site.name },

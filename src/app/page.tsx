@@ -46,12 +46,12 @@ export default async function HomePage() {
           <div className="lg:col-span-5 lg:pt-2">
             <p className="text-base leading-relaxed text-white/65 md:text-lg">
               We amplify real stories, reduce stigma, and bring attention to the
-              people and organizations doing meaningful work — on addiction and
-              recovery, mental health, homelessness, and second chances.
+              people and organizations doing meaningful work on addiction and
+              recovery, mental health, homelessness and second chances.
             </p>
             <p className="mt-4 text-base leading-relaxed text-white/65">
-              The podcast is our engine. But People Suq is bigger than any one
-              show — it&apos;s where hard conversations happen out loud.
+              The podcast is our engine, but People Suq is bigger than any one
+              show. It&apos;s where hard conversations happen out loud.
             </p>
             <Button href="/about" variant="ghost" className="mt-6 !px-0">
               More about People Suq →
@@ -89,7 +89,7 @@ export default async function HomePage() {
         <SectionHeading
           eyebrow="Real stories"
           title="Stories from real people"
-          intro="Profiles, interviews, and firsthand accounts — told like a modern documentary, not a charity brochure."
+          intro="Profiles, interviews and firsthand accounts, told like a modern documentary, not a charity brochure."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {featuredStories.map((story) => (
@@ -181,7 +181,7 @@ export default async function HomePage() {
           <SectionHeading
             eyebrow="Merch with meaning"
             title="Wear the message"
-            intro="Cause-driven pieces that start conversations. This isn't just apparel — it's identity, awareness, and support for the work."
+            intro="Cause-driven pieces that start conversations. Every piece carries the message and helps support the work."
           />
           <Button href="/merch" variant="secondary" className="mb-1">
             Shop all
@@ -204,7 +204,7 @@ export default async function HomePage() {
           <p className="mx-auto mt-5 max-w-xl leading-relaxed text-white/70">
             Watch and share the podcast, tell your story, follow along, support
             community initiatives, or grab something from the shop. However you
-            show up — it matters.
+            show up, it matters.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button href="/get-involved" size="lg">

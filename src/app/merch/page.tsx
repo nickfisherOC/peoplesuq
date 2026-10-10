@@ -22,7 +22,7 @@ export default async function MerchPage() {
       <PageHeader
         eyebrow="Merch with meaning"
         title="Wear the message"
-        intro="People Suq merch isn't just apparel — it's identity, awareness, and a way to support the conversation. Every piece carries a message worth starting."
+        intro="People Suq merch is made to start conversations and back the work. Every piece carries a message worth starting."
       />
 
       <Section tone="charcoal">
@@ -30,7 +30,7 @@ export default async function MerchPage() {
           <MerchBrowser products={products} />
         ) : (
           <p className="rounded-2xl border border-white/10 bg-charcoal p-10 text-center text-white/50">
-            New drops are on the way — check back soon.
+            New drops are on the way. Check back soon.
           </p>
         )}
 

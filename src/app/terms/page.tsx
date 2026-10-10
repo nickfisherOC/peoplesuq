@@ -12,7 +12,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms of Use"
-      updated="Draft — not yet finalized"
+      updated="Draft, not yet finalized"
       intro="The basic terms for using the People Suq website and its content."
       sections={[
         {

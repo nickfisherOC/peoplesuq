@@ -12,7 +12,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      updated="Draft — not yet finalized"
+      updated="Draft, not yet finalized"
       intro="How People Suq collects, uses, and protects your information. This is a plain-language starting point."
       sections={[
         {
@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         {
           heading: "Information we collect",
           body: [
-            "Information you give us directly — for example, when you email us or submit a story (your name, contact details, and anything you choose to share).",
+            "Information you give us directly, for example when you email us or submit a story (your name, contact details, and anything you choose to share).",
             "Basic usage data collected automatically to help us understand how the site is used and improve it.",
           ],
         },

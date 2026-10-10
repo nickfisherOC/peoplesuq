@@ -54,7 +54,7 @@ export default function AboutPage() {
             </h2>
             <div className="mt-6 space-y-4 leading-relaxed text-white/70">
               <p>
-                Addiction, mental health, homelessness, food insecurity — these
+                Addiction, mental health, homelessness, food insecurity. These
                 touch nearly every family, yet they&apos;re still talked about
                 in whispers. The silence carries a cost: stigma, isolation, and
                 people who don&apos;t reach for help because they think
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <p>
                 People Suq exists to change that. We put real conversations in
                 front of people, in a format they&apos;ll actually watch and
-                share — because when one person tells the truth out loud, it
+                share, because when one person tells the truth out loud, it
                 gives someone else permission to do the same.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function AboutPage() {
           <MediaFrame
             seed="about-why"
             src="/images/community-3.jpg"
-            alt="People Suq — real conversations in the open"
+            alt="People Suq, real conversations in the open"
             label="Our why"
             aspect="wide"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -103,7 +103,7 @@ export default function AboutPage() {
                 filter, no talking around the hard parts.
               </p>
               <p>
-                From there, People Suq grows outward — stories, issue hubs,
+                From there, People Suq grows outward: stories, issue hubs,
                 merch that carries the message, and partnerships with people and
                 organizations doing the real work.
               </p>
@@ -166,7 +166,7 @@ export default function AboutPage() {
           <p className="mt-4 leading-relaxed text-white/75">
             And where conversation can turn into real-world help, the{" "}
             <strong>Markin K Kossowski Foundation</strong> carries the community
-            impact forward. We highlight and support that work — but People Suq
+            impact forward. We highlight and support that work, but People Suq
             stands as its own platform, with its own voice.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -188,7 +188,7 @@ export default function AboutPage() {
           <p className="mt-6 leading-relaxed text-white/70">
             We want People Suq to become the place people come to hear real
             conversations, understand important issues, discover real stories,
-            and connect with meaningful community work — a platform that grows
+            and connect with meaningful community work. A platform that grows
             with every voice that joins it.
           </p>
           <Button href="/get-involved" size="lg" className="mt-8">
