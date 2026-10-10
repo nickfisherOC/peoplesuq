@@ -66,15 +66,15 @@ export const connectedBrands = {
 } as const;
 
 /**
- * Social + listening links. Replace the "#" placeholders with real profiles.
- * These drive the footer, the podcast page, and share actions.
+ * Social + listening links. These drive the footer, the podcast page, and
+ * share actions. (No X/Twitter account yet — add an `x` entry here and a link
+ * in Footer.tsx when there is one.)
  */
 export const social = {
-  instagram: "#",
-  youtube: "#",
-  tiktok: "#",
-  x: "#",
-  facebook: "#",
+  instagram: "https://www.instagram.com/people.suq",
+  youtube: "https://www.youtube.com/@PeopleSuq",
+  tiktok: "https://www.tiktok.com/@people.suq",
+  facebook: "https://www.facebook.com/peoplesuq",
 } as const;
 
 export const listenLinks = {
