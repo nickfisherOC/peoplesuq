@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/merch",
     "/impact",
     "/about",
+    "/suq-media",
     "/get-involved",
     "/contact",
   ].map((path) => ({
