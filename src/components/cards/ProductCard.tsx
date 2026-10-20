@@ -1,17 +1,16 @@
-"use client";
-
+import Link from "next/link";
 import MediaFrame from "../MediaFrame";
 import { PlaceholderTag } from "../ui";
-import AddToCartButton from "../cart/AddToCartButton";
 import type { Product } from "@/content/types";
 
 /**
- * Merch card. When a product has a Shopify `variantId`, it shows a live
- * "Add to cart" button; otherwise it presents the piece and its message with a
- * "Coming soon" state (no dead buy affordance).
+ * Merch card. Real Shopify products link to their on-site product page
+ * (/merch/<handle>) where colour/size can be chosen and added to the cart.
+ * Local placeholder merch (no Shopify variant) shows a "Coming soon" state.
  */
 export default function ProductCard({ product }: { product: Product }) {
-  const purchasable = Boolean(product.variantId) && !product.soldOut;
+  // A real Shopify product (has a variant) gets its own product page.
+  const href = product.variantId ? `/merch/${product.slug}` : undefined;
 
   const media = (
     <div className="relative">
@@ -39,23 +38,27 @@ export default function ProductCard({ product }: { product: Product }) {
     // Mobile: compact horizontal row (image left, details right) so there is one
     // product per row. sm+ : classic vertical card in the responsive grid.
     <article className="group flex overflow-hidden rounded-2xl border border-white/10 bg-charcoal transition-colors hover:border-white/25 sm:flex-col">
-      {product.shopUrl ? (
-        <a
-          href={product.shopUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+      {href ? (
+        <Link
+          href={href}
           aria-label={`View ${product.name}`}
           className="w-32 shrink-0 self-stretch sm:w-full"
         >
           {media}
-        </a>
+        </Link>
       ) : (
         <div className="w-32 shrink-0 self-stretch sm:w-full">{media}</div>
       )}
 
       <div className="flex flex-1 flex-col p-4 sm:p-5">
         <h3 className="text-base font-bold leading-snug text-white">
-          {product.name}
+          {href ? (
+            <Link href={href} className="hover:text-orange-400">
+              {product.name}
+            </Link>
+          ) : (
+            product.name
+          )}
         </h3>
         {product.price && (
           <p className="mt-1 font-semibold text-orange-400">{product.price}</p>
@@ -67,11 +70,13 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
 
         <div className="mt-4 sm:mt-5">
-          {purchasable && product.variantId ? (
-            <AddToCartButton
-              variantId={product.variantId}
-              available={product.available ?? true}
-            />
+          {href ? (
+            <Link
+              href={href}
+              className="inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              {product.soldOut ? "View options" : "Choose options"}
+            </Link>
           ) : (
             <span className="text-sm font-semibold text-white/50">
               {product.soldOut ? "Sold out" : "Coming soon"}
