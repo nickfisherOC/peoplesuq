@@ -220,6 +220,148 @@ export async function getMerchProducts(
   }
 }
 
+/* ----------------------------- Product detail ---------------------------- */
+
+export interface VariantOption {
+  name: string;
+  value: string;
+}
+
+export interface ProductVariantDetail {
+  id: string;
+  title: string;
+  available: boolean;
+  price?: string;
+  selectedOptions: VariantOption[];
+  image?: { src: string; alt: string };
+}
+
+export interface ProductOptionDetail {
+  name: string;
+  values: string[];
+}
+
+export interface ProductDetail {
+  handle: string;
+  title: string;
+  description: string;
+  descriptionHtml: string;
+  /** Lowest variant price, for display. */
+  price?: string;
+  images: { src: string; alt: string }[];
+  options: ProductOptionDetail[];
+  variants: ProductVariantDetail[];
+  available: boolean;
+  shopUrl?: string;
+}
+
+interface ShopifyProductDetailNode {
+  handle: string;
+  title: string;
+  description: string;
+  descriptionHtml: string;
+  availableForSale: boolean;
+  onlineStoreUrl: string | null;
+  priceRange: { minVariantPrice: Money };
+  images: { nodes: { url: string; altText: string | null }[] };
+  options: { name: string; values: string[] }[];
+  collections: { nodes: { handle: string }[] };
+  variants: {
+    nodes: {
+      id: string;
+      title: string;
+      availableForSale: boolean;
+      price: Money;
+      selectedOptions: { name: string; value: string }[];
+      image: { url: string; altText: string | null } | null;
+    }[];
+  };
+}
+
+/** Is this product one of the People Suq merch products we expose on-site? */
+function detailIsMerch(handles: string[], productHandle: string): boolean {
+  if (HANDLES.includes(productHandle)) return true;
+  if (handles.length === 0) return false;
+  if (INCLUDE_COLLECTIONS.length > 0) {
+    return handles.some((h) => INCLUDE_COLLECTIONS.includes(h));
+  }
+  return handles.some((h) => !EXCLUDE_COLLECTIONS.has(h));
+}
+
+/**
+ * Fetch a single product with every variant, option and image, for the on-site
+ * product page. Returns null when Shopify isn't configured, the product doesn't
+ * exist, or it isn't a People Suq merch product (so commercial/other items are
+ * never exposed by direct handle).
+ */
+export async function getProductByHandle(
+  handle: string,
+): Promise<ProductDetail | null> {
+  if (!isShopifyConfigured()) return null;
+  try {
+    const data = await shopifyFetch<{ product: ShopifyProductDetailNode | null }>(
+      `query Product($handle: String!) {
+        product(handle: $handle) {
+          handle
+          title
+          description
+          descriptionHtml
+          availableForSale
+          onlineStoreUrl
+          priceRange { minVariantPrice { amount currencyCode } }
+          images(first: 10) { nodes { url altText } }
+          options { name values }
+          collections(first: 20) { nodes { handle } }
+          variants(first: 100) {
+            nodes {
+              id
+              title
+              availableForSale
+              price { amount currencyCode }
+              selectedOptions { name value }
+              image { url altText }
+            }
+          }
+        }
+      }`,
+      { handle },
+      "force-cache",
+    );
+    const p = data.product;
+    if (!p) return null;
+    const collHandles = p.collections.nodes.map((c) => c.handle);
+    if (!detailIsMerch(collHandles, p.handle)) return null;
+
+    return {
+      handle: p.handle,
+      title: p.title,
+      description: p.description || "",
+      descriptionHtml: p.descriptionHtml || "",
+      price: formatMoney(p.priceRange.minVariantPrice),
+      images: p.images.nodes.map((i) => ({
+        src: i.url,
+        alt: i.altText ?? p.title,
+      })),
+      options: p.options.map((o) => ({ name: o.name, values: o.values })),
+      variants: p.variants.nodes.map((v) => ({
+        id: v.id,
+        title: v.title,
+        available: v.availableForSale,
+        price: formatMoney(v.price),
+        selectedOptions: v.selectedOptions,
+        image: v.image
+          ? { src: v.image.url, alt: v.image.altText ?? p.title }
+          : undefined,
+      })),
+      available: p.availableForSale,
+      shopUrl: p.onlineStoreUrl ?? undefined,
+    };
+  } catch (err) {
+    console.error("[shopify] getProductByHandle failed:", err);
+    return null;
+  }
+}
+
 /* --------------------------------- Cart ---------------------------------- */
 
 export interface CartLine {
