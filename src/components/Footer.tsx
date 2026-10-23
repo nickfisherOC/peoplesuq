@@ -70,12 +70,23 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm">
               {mainNav.map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-white/70 hover:text-white"
-                  >
-                    {item.label}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-white/70 hover:text-white"
+                    >
+                      {item.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

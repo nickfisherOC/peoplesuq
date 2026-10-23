@@ -23,13 +23,17 @@ export const site = {
     "We use media and storytelling to talk openly about hard issues, amplify real stories, reduce stigma, and highlight the people and organizations doing meaningful work.",
 } as const;
 
-/** Primary navigation shown in the header. */
-export const mainNav: { label: string; href: string }[] = [
+/** The Shopify storefront. Merch links across the site point here; the on-site
+ *  /merch pages are kept for SEO but are no longer linked from the nav. */
+export const merchUrl = "https://merch.peoplesuq.com";
+
+/** Primary navigation shown in the header. `external` items link off-site. */
+export const mainNav: { label: string; href: string; external?: boolean }[] = [
   { label: "Home", href: "/" },
   { label: "Podcast", href: "/podcast" },
   { label: "Issues", href: "/issues" },
   { label: "Stories", href: "/stories" },
-  { label: "Merch", href: "/merch" },
+  { label: "Merch", href: merchUrl, external: true },
   { label: "Impact", href: "/impact" },
   { label: "About", href: "/about" },
 ];

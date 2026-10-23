@@ -57,23 +57,38 @@ export default function Header() {
           aria-label="Primary"
           className="hidden items-center gap-1 lg:flex"
         >
-          {mainNav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? "page" : undefined}
-              className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
-                isActive(item.href)
-                  ? "text-white"
-                  : "text-white/60 hover:text-white"
-              }`}
-            >
-              {item.label}
-              {isActive(item.href) && (
-                <span className="mx-auto mt-0.5 block h-0.5 w-4 rounded-full bg-orange-500" />
-              )}
-            </Link>
-          ))}
+          {mainNav.map((item) => {
+            const active = isActive(item.href);
+            const cls = `rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+              active ? "text-white" : "text-white/60 hover:text-white"
+            }`;
+            if (item.external) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cls}
+                >
+                  {item.label}
+                </a>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={active ? "page" : undefined}
+                className={cls}
+              >
+                {item.label}
+                {active && (
+                  <span className="mx-auto mt-0.5 block h-0.5 w-4 rounded-full bg-orange-500" />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -122,20 +137,35 @@ export default function Header() {
           className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-white/10 bg-ink px-5 py-6 md:top-20"
         >
           <nav aria-label="Mobile" className="flex flex-col gap-1">
-            {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={isActive(item.href) ? "page" : undefined}
-                className={`rounded-xl px-4 py-3 text-lg font-semibold ${
-                  isActive(item.href)
-                    ? "bg-white/10 text-white"
-                    : "text-white/75"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {mainNav.map((item) => {
+              const active = isActive(item.href);
+              const cls = `rounded-xl px-4 py-3 text-lg font-semibold ${
+                active ? "bg-white/10 text-white" : "text-white/75"
+              }`;
+              if (item.external) {
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cls}
+                  >
+                    {item.label}
+                  </a>
+                );
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cls}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="mt-6 flex flex-col gap-3">

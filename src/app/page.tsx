@@ -14,7 +14,7 @@ import { issues } from "@/content/issues";
 import { latestEpisode } from "@/content/episodes";
 import { storiesByNewest } from "@/content/stories";
 import { getMerch } from "@/lib/merch";
-import { connectedBrands } from "@/lib/site";
+import { connectedBrands, merchUrl } from "@/lib/site";
 
 // Self-referencing canonical for the homepage. Resolves against metadataBase
 // (the www canonical host) → https://www.peoplesuq.com/.
@@ -183,7 +183,7 @@ export default async function HomePage() {
             title="Wear the message"
             intro="Cause-driven pieces that start conversations. Every piece carries the message and helps support the work."
           />
-          <Button href="/merch" variant="secondary" className="mb-1">
+          <Button href={merchUrl} variant="secondary" className="mb-1">
             Shop all
           </Button>
         </div>

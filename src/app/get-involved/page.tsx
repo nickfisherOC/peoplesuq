@@ -4,7 +4,7 @@ import PageHeader from "@/components/PageHeader";
 import Section from "@/components/Section";
 import Button from "@/components/Button";
 import ShareStoryButton from "@/components/story-form/ShareStoryButton";
-import { social, listenLinks, connectedBrands, contact } from "@/lib/site";
+import { social, listenLinks, connectedBrands, contact, merchUrl } from "@/lib/site";
 
 interface Action {
   title: string;
@@ -52,9 +52,9 @@ const actions: Action[] = [
   },
   {
     title: "Wear the message",
-    body: "Cause-driven merch that starts conversations and supports the mission.",
+    body: "Cause-driven merch that starts conversations and carries the message.",
     cta: "Shop merch",
-    href: "/merch",
+    href: merchUrl,
   },
   {
     title: "Learn how it all connects",
