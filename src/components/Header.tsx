@@ -52,10 +52,14 @@ export default function Header() {
         <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
         <Logo className="h-9 w-auto md:h-11" priority />
 
-        {/* Desktop nav */}
+        {/* Desktop nav. Shown at xl (>=1280) rather than lg: with eight
+            top-level items plus the CTA cluster, lg (1024) is too narrow and
+            the row would overflow. Below xl, everything lives in the mobile
+            menu, where every nav item (including Society Under Question) is
+            still top-level. */}
         <nav
           aria-label="Primary"
-          className="hidden items-center gap-1 lg:flex"
+          className="hidden items-center gap-1 xl:flex"
         >
           {mainNav.map((item) => {
             const active = isActive(item.href);
@@ -91,7 +95,7 @@ export default function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <CartButton />
           <Button href="/podcast" variant="ghost" size="md">
             Watch
@@ -102,7 +106,7 @@ export default function Header() {
         </div>
 
         {/* Mobile: cart + menu toggle */}
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
         <CartButton />
         <button
           type="button"
@@ -134,7 +138,7 @@ export default function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-white/10 bg-ink px-5 py-6 md:top-20"
+          className="xl:hidden fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-white/10 bg-ink px-5 py-6 md:top-20"
         >
           <nav aria-label="Mobile" className="flex flex-col gap-1">
             {mainNav.map((item) => {
