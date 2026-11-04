@@ -10,9 +10,11 @@ import { SectionHeading, Eyebrow } from "@/components/ui";
 import IssueCard from "@/components/cards/IssueCard";
 import StoryCard from "@/components/cards/StoryCard";
 import ProductCard from "@/components/cards/ProductCard";
+import CampaignVideoSection from "@/components/campaign/CampaignVideoSection";
 import { issues } from "@/content/issues";
 import { latestEpisode } from "@/content/episodes";
 import { storiesByNewest } from "@/content/stories";
+import { featuredCampaignVideos } from "@/content/campaignVideos";
 import { getMerch } from "@/lib/merch";
 import { connectedBrands, merchUrl } from "@/lib/site";
 
@@ -50,12 +52,27 @@ export default async function HomePage() {
               recovery, mental health, homelessness and second chances.
             </p>
             <p className="mt-4 text-base leading-relaxed text-white/65">
-              The podcast is our engine, but People Suq is bigger than any one
-              show. It&apos;s where hard conversations happen out loud.
+              SUQ stands for Society Under Question. It is the idea behind
+              everything here: question the stigma, challenge the narrative, and
+              change the conversation. The podcast is our engine, but People Suq
+              is bigger than any one show. It&apos;s where hard conversations
+              happen out loud.
             </p>
-            <Button href="/about" variant="ghost" className="mt-6 !px-0">
-              More about People Suq →
-            </Button>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Button
+                href="/society-under-question"
+                variant="ghost"
+                className="!px-0"
+              >
+                Discover Society Under Question →
+              </Button>
+              <Link
+                href="/about"
+                className="text-sm font-semibold text-white/60 underline underline-offset-4 hover:text-white"
+              >
+                More about People Suq
+              </Link>
+            </div>
           </div>
         </div>
       </Section>
@@ -103,7 +120,21 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* 6. Community impact / Foundation */}
+      {/* 6. Society Under Question campaign videos */}
+      <Section tone="charcoal">
+        <CampaignVideoSection
+          title="Society Under Question"
+          intro="Short films built to question the stigma, challenge the narrative, and change the conversation. When the first ones are ready, they land here."
+          videos={featuredCampaignVideos}
+          footer={
+            <Button href="/society-under-question" variant="secondary">
+              What Society Under Question means
+            </Button>
+          }
+        />
+      </Section>
+
+      {/* 7. Community impact / Foundation */}
       <Section tone="purple">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -175,7 +206,7 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* 7. Merch */}
+      {/* 8. Merch */}
       <Section tone="charcoal">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading
@@ -194,7 +225,7 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      {/* 8. Get involved / Join the conversation */}
+      {/* 9. Get involved / Join the conversation */}
       <Section tone="ink">
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-purple-900 via-purple-950 to-ink px-6 py-14 text-center md:px-16 md:py-20">
           <Eyebrow className="justify-center">Get involved</Eyebrow>

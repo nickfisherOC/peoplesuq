@@ -62,6 +62,14 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <p className="mt-6 text-sm text-white/45">
+              <Link
+                href="/society-under-question"
+                className="hover:text-white/80"
+              >
+                SUQ stands for Society Under Question.
+              </Link>
+            </p>
           </div>
 
           {/* Explore */}
