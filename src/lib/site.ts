@@ -33,6 +33,7 @@ export const mainNav: { label: string; href: string; external?: boolean }[] = [
   { label: "Podcast", href: "/podcast" },
   { label: "Issues", href: "/issues" },
   { label: "Stories", href: "/stories" },
+  { label: "Society Under Question", href: "/society-under-question" },
   { label: "Merch", href: merchUrl, external: true },
   { label: "Impact", href: "/impact" },
   { label: "About", href: "/about" },

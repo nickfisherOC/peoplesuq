@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../Button";
 
 /**
@@ -34,7 +35,7 @@ export default function Hero() {
       <div className="container-page relative z-10 w-full py-16 md:py-24">
         <div className="max-w-2xl">
           <p className="eyebrow text-orange-500">
-            Media · Community · Conversation
+            SUQ = Society Under Question
           </p>
           <h1 className="headline mt-5 text-5xl text-white sm:text-6xl md:text-7xl">
             Real People.
@@ -42,8 +43,9 @@ export default function Hero() {
             Real <span className="text-orange-500">Conversations.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-            People Suq brings attention to the issues affecting our communities,
-            through stories, conversations, media and action.
+            SUQ stands for Society Under Question. People Suq brings attention to
+            the issues affecting our communities through stories, conversations
+            and media, and asks the questions most people talk around.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href="/get-involved" size="lg">
@@ -53,6 +55,13 @@ export default function Hero() {
               Watch the Podcast
             </Button>
           </div>
+          <Link
+            href="/society-under-question"
+            className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white/80 underline underline-offset-4 hover:text-white"
+          >
+            What does SUQ mean?
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
     </section>
