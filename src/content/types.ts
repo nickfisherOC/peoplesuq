@@ -90,6 +90,8 @@ export interface Story {
   format: "read" | "watch";
   /** YouTube video id for video stories. Empty until the video is published. */
   youtubeId?: string;
+  /** True for vertical (9:16 / Shorts) videos so the player renders portrait. */
+  vertical?: boolean;
   isPlaceholder?: boolean;
 }
 

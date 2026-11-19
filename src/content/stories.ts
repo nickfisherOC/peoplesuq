@@ -28,6 +28,7 @@ export const stories: Story[] = [
     issues: ["addiction-recovery"],
     format: "watch",
     youtubeId: "fGVrhqe3uwQ",
+    vertical: true,
   },
   {
     slug: "placeholder-community-profile",

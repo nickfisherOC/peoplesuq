@@ -1,11 +1,12 @@
 import Image from "next/image";
 
-type Aspect = "square" | "video" | "portrait" | "wide" | "ultrawide";
+type Aspect = "square" | "video" | "portrait" | "tall" | "wide" | "ultrawide";
 
 const aspectClass: Record<Aspect, string> = {
   square: "aspect-square",
   video: "aspect-video",
   portrait: "aspect-[3/4]",
+  tall: "aspect-[9/16]",
   wide: "aspect-[16/10]",
   ultrawide: "aspect-[21/9]",
 };

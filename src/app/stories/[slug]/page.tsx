@@ -86,6 +86,7 @@ export default async function StoryPage({
             posterSrc={story.image.src}
             seed={story.slug}
             title={story.title}
+            vertical={story.vertical}
             priority
           />
 
