@@ -90,6 +90,12 @@ export interface Story {
   format: "read" | "watch";
   /** YouTube video id for video stories. Empty until the video is published. */
   youtubeId?: string;
+  /** True for vertical (9:16 / Shorts) videos so the player renders portrait. */
+  vertical?: boolean;
+  /** Custom cover for the video player (click-to-play poster). Falls back to
+   *  `image` when unset. Lets the player use a purpose-made cover while cards
+   *  keep their own `image` (e.g. a 16:9 card cover + a 9:16 player cover). */
+  videoPoster?: ImageRef;
   isPlaceholder?: boolean;
 }
 

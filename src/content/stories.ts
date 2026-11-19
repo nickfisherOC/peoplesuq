@@ -24,7 +24,10 @@ export const stories: Story[] = [
     date: "2026-01-05",
     teaser:
       "\"Can't you just quit?\" is the question people throw at anyone living with addiction, as if willpower were the only thing in the way. Kerry, who has been clean and sober for 24 years, answers it honestly and explains why quitting is never that simple.",
-    image: { src: "/images/host-kerry.jpg", alt: "Kerry, Co-Founder and Host of People Suq" },
+    image: {
+      src: "/images/story-cant-you-just-quit.webp",
+      alt: "Can't you just quit? Kerry on addiction and willpower",
+    },
     issues: ["addiction-recovery"],
     format: "watch",
     youtubeId: "fGVrhqe3uwQ",

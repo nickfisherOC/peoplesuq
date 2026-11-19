@@ -83,9 +83,11 @@ export default async function StoryPage({
         <div className="mx-auto max-w-4xl">
           <VideoPlayer
             youtubeId={story.youtubeId}
-            posterSrc={story.image.src}
+            posterSrc={story.videoPoster?.src ?? story.image.src}
+            posterAlt={story.videoPoster?.alt ?? story.image.alt}
             seed={story.slug}
             title={story.title}
+            vertical={story.vertical}
             priority
           />
 
