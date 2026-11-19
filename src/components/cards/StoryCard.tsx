@@ -26,7 +26,10 @@ export default function StoryCard({
           src={story.image.src}
           alt={story.image.alt}
           label={story.kind}
-          aspect={featured ? "wide" : "portrait"}
+          // Video stories carry 16:9 covers, so cards use a video frame. focus
+          // "top" keeps faces in shot when a portrait photo is used as the cover.
+          aspect={featured ? "wide" : "video"}
+          focus="top"
           rounded={false}
           sizes={
             featured
