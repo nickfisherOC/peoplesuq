@@ -9,23 +9,25 @@ import type { Story } from "./types";
  * Photography is the poster frame. Replace summaries/videos with real content
  * as it's produced.
  *
- * These six are demo/scaffold stories, marked `isPlaceholder: true`: they stay
- * live and crawlable but carry a `noindex` and are kept out of the sitemap
- * (see sitemap.ts and stories/[slug]/page.tsx) until replaced with real,
- * published stories. Clear the flag once a story is real.
+ * The first story is real and published (a real `youtubeId`, no placeholder
+ * flag), so it is indexable and included in the sitemap. The rest are
+ * demo/scaffold stories, marked `isPlaceholder: true`: they stay live and
+ * crawlable but carry a `noindex` and are kept out of the sitemap (see
+ * sitemap.ts and stories/[slug]/page.tsx) until replaced with real, published
+ * stories. Clear the flag and add the video once a story is real.
  */
 export const stories: Story[] = [
   {
-    slug: "placeholder-recovery-story",
-    title: "The long road back",
+    slug: "kerry-on-addiction-and-willpower",
+    title: "Can't you just quit? Kerry on addiction and willpower",
     kind: "Recovery",
     date: "2026-01-05",
     teaser:
-      "Recovery is rarely a straight line. It's hard days, small wins, and people who refuse to give up on you. One person walks us through what it actually took to come back, and what keeps them going now.",
-    image: { src: "/images/person-story-3.png", alt: "Portrait accompanying a recovery story" },
+      "\"Can't you just quit?\" is the question people throw at anyone living with addiction, as if willpower were the only thing in the way. Kerry, who has been clean and sober for 24 years, answers it honestly and explains why quitting is never that simple.",
+    image: { src: "/images/host-kerry.jpg", alt: "Kerry, Co-Founder and Host of People Suq" },
     issues: ["addiction-recovery"],
     format: "watch",
-    isPlaceholder: true,
+    youtubeId: "fGVrhqe3uwQ",
   },
   {
     slug: "placeholder-community-profile",
